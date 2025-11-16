@@ -19,7 +19,7 @@ timezone: Asia/Singapore
 
 title: Dun Yan Ong # the main title
 
-tagline: Electrical Software Engineer | AI & Robotics Specialist # it will display as the subtitle
+tagline: Electrical Software Engineer | AI & Robotics # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Electrical Software Engineer specializing in AI, software development, and robotics. 
