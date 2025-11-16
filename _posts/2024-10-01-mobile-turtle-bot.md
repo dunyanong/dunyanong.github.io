@@ -12,7 +12,7 @@ image:
 
 A comprehensive robotics project showcasing the development of a mobile robot using **Dijkstra's algorithm** for pathfinding and **SLAM** (Simultaneous Localization and Mapping) for localization and mapping, with detailed planning and physical demonstrations.
 
-![Robotics Project Development](/assets/img/dy04/projects/project-01/turtlebot2.jpg)
+![Robotics Project Development](/assets/img/dy04/projects/project-01/turtlebot.jpg)
 _Engineering autonomous navigation systems - combining algorithms with real-world robotics_
 
 ## Project Overview
