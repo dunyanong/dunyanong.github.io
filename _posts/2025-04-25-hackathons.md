@@ -1,8 +1,8 @@
 ---
 title: "My Hackathon Journey: Building Under Pressure"
-date: 2025-04-25 18:00:00 +0800
+date: 2024-04-25 18:00:00 +0800
 categories: [Experience, Hackathons]
-tags: [hackathons, startups, innovation, teamwork, coding]
+tags: [software]
 image:
   path: /assets/img/dy04/gallery/hackathon_pitch.jpg
   alt: Hackathon Experience

@@ -1,9 +1,8 @@
 ---
 title: "Image Classification Using CNN"
-date: 2024-10-15 14:00:00 +0800
+date: 2023-12-15 14:00:00 +0800
 categories: [Projects, Machine Learning]
-tags: [cnn, computer vision, pytorch, deep learning, cifar-10]
-pin: true
+tags: [machine-learning, software]
 image:
   path: /assets/img/dy04/ProjectImages/imageclassification/vggnetpaper.png
   alt: CNN Image Classification on CIFAR-10

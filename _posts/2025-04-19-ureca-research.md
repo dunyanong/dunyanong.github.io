@@ -1,8 +1,8 @@
 ---
 title: "URECA Research: Wireless Motor System for Robotics"
-date: 2025-04-19 15:30:00 +0800
+date: 2024-08-19 15:30:00 +0800
 categories: [Research, Robotics]
-tags: [ureca, research, wireless power transfer, motor control, simulink, ntu]
+tags: [research, signal-processing, control-engineering]
 image:
   path: /assets/img/dy04/avatar.jpg
   alt: Wireless Motor System Research

@@ -1,8 +1,8 @@
 ---
 title: "Team Archimedes: Pioneering Autonomous Maritime Systems"
-date: 2025-10-05 16:45:00 +0800
+date: 2024-01-05 16:45:00 +0800
 categories: [Projects, Robotics]
-tags: [autonomous vehicles, maritime systems, yolo, object detection, ros2, usv, drone systems]
+tags: [robotics, software]
 image:
   path: /assets/img/dy04/archimedes_autonomous_vehicles/archimedeslab.jpg
   alt: Team Archimedes Autonomous Maritime Systems

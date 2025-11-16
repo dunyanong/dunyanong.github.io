@@ -1,65 +1,52 @@
 ---
-title: "Semester Exchange at Shanghai Jiao Tong University: A Research Journey"
+title: "Semester Exchange at Shanghai Jiao Tong University"
 date: 2025-08-15 14:20:00 +0800
 categories: [Experience, Exchange]
-tags: [sjtu, exchange, research, machine learning, optimization, china, travel]
+tags: [software]
+pin: true
 image:
   path: /assets/img/dy04/gallery/shanghai.jpeg
-  alt: Shanghai Jiao Tong University Campus
+  alt: Shanghai Jiao Tong University Exchange Experience
 ---
 
-# Semester Exchange at Shanghai Jiao Tong University: A Research Journey
+# Semester Exchange at Shanghai Jiao Tong University
 
-My semester exchange at **Shanghai Jiao Tong University (SJTU)** has been an incredible journey of academic growth, cultural immersion, and research exploration. Currently serving as a **Robotics Research Assistant** under the **Robotics Autonomy and Planning Lab**, supervised by **Dr. Zhongqiang Ren**, this experience has shaped my understanding of advanced robotics and international research collaboration.
+My semester exchange at **Shanghai Jiao Tong University (SJTU)** has been an incredible journey of academic growth, cultural immersion, and exploring China. Beyond academics, I've had the opportunity to travel extensively and experience the rich culture and stunning landscapes across the country.
 
 ![Shanghai Skyline](/assets/img/dy04/gallery/shanghai.jpeg)
-_The stunning Shanghai skyline - where tradition meets cutting-edge technology during my exchange_
+_Shanghai_
 
-## Research Experience at Robotics Autonomy and Planning Lab
+## Research at SJTU
 
-Working under **Dr. Zhongqiang Ren** at the RAP Lab
+During my exchange, I'm also working as a **Robotics Research Assistant** at the **Robotics Autonomy and Planning (RAP) Lab**, supervised by **Dr. Zhongqiang Ren**. 
 
-## Cultural Immersion & Travel Adventures
+**Read more about my research work**: [RAP Lab Research Assistant Experience](/posts/rap-lab-research/)
 
-The exchange program offered incredible opportunities to explore China's rich culture and diverse landscapes:
+## Exploring China
 
 ![Guangzhou Architecture](/assets/img/dy04/gallery/gz.jpg)
-_Exploring Guangzhou - experiencing the blend of modern architecture and traditional Chinese culture_
+_Guangzhou_
 
-### Cities Explored
+![Chengdu Pandas](/assets/img/dy04/gallery/chengdu_panda.jpg) 
+_Chengdu_
 
-#### **Chengdu & Chongqing** 🐼
-- **Chengdu**: Panda Research Base and authentic Sichuanese cuisine
-- **Spicy Food Culture**: Experiencing the famous Sichuan peppercorns
-- **Chongqing**: Mountain city with incredible hot pot experiences
-- **Yangtze River**: Scenic river cruise and Three Gorges exploration
+![Hangzhou West Lake](/assets/img/dy04/gallery/hangzhou_westlake.jpg)
+_Hangzhou_
 
-#### **Hangzhou** 🏮
-- **West Lake**: UNESCO World Heritage site with stunning scenery
-- **Tea Culture**: Learning about traditional Chinese tea ceremonies
-- **Digital Innovation**: Experiencing Alibaba's smart city initiatives
-- **Traditional Architecture**: Ancient temples and pagodas
+![Wuzhen Water Town](/assets/img/dy04/gallery/wuzhen_watertown.jpg)
+_Wuzhen_
 
-#### **Wuzhen** 🏛️
-- **Water Town**: Ancient canal town with traditional architecture
-- **Cultural Heritage**: Living museum of traditional Chinese life
-- **Photography**: Capturing the beauty of historical China
-- **Peaceful Atmosphere**: Contrast to bustling modern cities
+![Suzhou Gardens](/assets/img/dy04/gallery/suzhou_gardens.jpg)
+_Suzhou_
 
-#### **Suzhou** 🎋
-- **Classical Gardens**: UNESCO World Heritage gardens
-- **Silk Industry**: Learning about traditional silk production
-- **Venice of the East**: Beautiful canal networks and bridges
-- **Art and Crafts**: Traditional Chinese artistic techniques
+![Nanjing Historic Sites](/assets/img/dy04/gallery/nanjing_historic.jpg)
+_Nanjing_
 
-#### **Shanghai** 🏙️
-- **Modern Metropolis**: Futuristic skyline and urban development
-- **The Bund**: Historic waterfront with colonial architecture
-- **Technology Hub**: Innovation centers and startup ecosystem
-- **International Cuisine**: Diverse food scene from around the world
+![Chongqing Skyline](/assets/img/dy04/gallery/chongqing_skyline.jpg)
+_Chongqing_
 
-#### **Nanjing** 🏯
-- **Historical Capital**: Former capital with rich imperial history
-- **Memorial Sites**: Important historical and cultural landmarks
-- **University District**: Vibrant academic and cultural atmosphere
-- **Purple Mountain**: Natural beauty within the urban environment
+## The Experience
+
+This exchange program has been transformative - from conducting cutting-edge robotics research to immersing myself in Chinese culture and exploring historic cities. It's been the perfect blend of academic rigor and cultural adventure.
+
+**Duration**: August 2025 - December 2025

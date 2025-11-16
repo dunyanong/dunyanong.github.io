@@ -1,8 +1,8 @@
 ---
 title: "Autonomous Exploration Robot with Frontier-Based Navigation"
-date: 2024-11-05 16:20:00 +0800
+date: 2025-10-05 16:20:00 +0800
 categories: [Projects, Robotics]
-tags: [autonomous exploration, frontier-based, navigation, robotics, ros, gazebo]
+tags: [robotics, software]
 image:
   path: /assets/img/dy04/gallery/horizontal-2.jpg
   alt: Autonomous Exploration Robot System

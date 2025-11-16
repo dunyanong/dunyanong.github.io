@@ -1,8 +1,8 @@
 ---
 title: "Multi-Agent Path Finding: Conflict-Based Search"
-date: 2024-09-20 16:30:00 +0800
+date: 2025-05-20 16:30:00 +0800
 categories: [Projects, Robotics]
-tags: [mapf, path planning, cbs, algorithms, robotics, opencv]
+tags: [robotics, software]
 pin: true
 image:
   path: /assets/img/dy04/mapf_toy.gif

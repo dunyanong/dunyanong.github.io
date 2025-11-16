@@ -1,12 +1,12 @@
 ---
 title: "Team Robo: Leading the ICRA BARN Challenge 2026"
-date: 2025-11-10 20:00:00 +0800
-categories: [Competition, Robotics]
-tags: [icra, barn challenge, path planning, control engineering, team leadership, robotics]
+date: 2025-11-10 16:45:00 +0800
+categories: [Projects, Robotics]
+tags: [robotics, software]
 pin: true
 image:
   path: /assets/img/dy04/gallery/horizontal-1.jpg
-  alt:  ICRA BARN Challenge
+  alt: Team Robo ICRA BARN Challenge 2026
 ---
 
 # Team Robo: Leading the ICRA BARN Challenge 2026
