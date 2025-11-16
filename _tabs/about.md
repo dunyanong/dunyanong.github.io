@@ -81,35 +81,6 @@ Dynamic team developing cutting-edge **Autonomous Maritime Systems (AMS)**
 - **"Design of a Wireless Motor System for Robotics"** - URECA Research Project
 - [Research Paper](https://drive.google.com/file/d/1s8v6ckISs2bc2-xwGYKxjjfK_yRfn7R-/view?usp=sharing)
 
-## 🛠️ Technical Skills
-
-### Programming Languages
-- **Python** (PyTorch, OpenCV, NumPy)
-- **C++** (ROS, embedded systems)
-- **JavaScript/TypeScript** (React, Node.js, Next.js)
-- **Go** (Backend development)
-- **MATLAB/Simulink** (Signal processing, control systems)
-
-### Robotics & AI
-- **Robot Operating System (ROS/ROS2)**
-- **Computer Vision** (OpenCV, PCL)
-- **Deep Learning** (PyTorch, CNN, YOLO)
-- **Path Planning** (Dijkstra, A*, CBS algorithms)
-- **SLAM** (Simultaneous Localization and Mapping)
-- **Motion Planning & Control**
-
-### Web Development
-- **Frontend**: React.js, Next.js, Tailwind CSS
-- **Backend**: Node.js, Express, Firebase
-- **Cloud**: AWS, Google Cloud Platform
-- **Databases**: Firebase, PostgreSQL
-
-### Hardware & Electronics
-- **Embedded Systems** (ESP32, Arduino, Raspberry Pi)
-- **PCB Design** and Assembly
-- **3D Printing** and CAD
-- **Sensor Integration** (LIDAR, cameras, IMU)
-
 ## 🌟 Key Projects
 
 ### [Multi-Agent Path Finding: Conflict-Based Search](https://github.com/dunyanong/cbs-mapf-public)
@@ -120,9 +91,6 @@ VGGNet-inspired architecture achieving 90% accuracy on CIFAR-10 with comprehensi
 
 ### [Autonomous Exploration Robot](https://github.com/dunyanong/exploration-preresearch)
 Frontier-based exploration system with ROS integration for autonomous environment mapping.
-
-### [Football Voting Poll](https://fvg.vercel.app/)
-Full-stack web application with real-time voting, chat functionality, and curated music playlists.
 
 ## 🎓 Community Involvement
 
