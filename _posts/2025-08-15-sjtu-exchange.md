@@ -27,24 +27,6 @@ During my exchange, I'm also working as a **Robotics Research Assistant** at the
 ![Guangzhou Architecture](/assets/img/dy04/gallery/gz.jpg)
 _Guangzhou_
 
-![Chengdu Pandas](/assets/img/dy04/gallery/chengdu_panda.jpg) 
-_Chengdu_
-
-![Hangzhou West Lake](/assets/img/dy04/gallery/hangzhou_westlake.jpg)
-_Hangzhou_
-
-![Wuzhen Water Town](/assets/img/dy04/gallery/wuzhen_watertown.jpg)
-_Wuzhen_
-
-![Suzhou Gardens](/assets/img/dy04/gallery/suzhou_gardens.jpg)
-_Suzhou_
-
-![Nanjing Historic Sites](/assets/img/dy04/gallery/nanjing_historic.jpg)
-_Nanjing_
-
-![Chongqing Skyline](/assets/img/dy04/gallery/chongqing_skyline.jpg)
-_Chongqing_
-
 ## The Experience
 
 This exchange program has been transformative - from conducting cutting-edge robotics research to immersing myself in Chinese culture and exploring historic cities. It's been the perfect blend of academic rigor and cultural adventure.
