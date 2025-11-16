@@ -52,9 +52,6 @@ Currently pursuing my **Bachelor of Electrical and Electronics Engineering** at 
 - Expected Grade: First Class Honours (Highest Distinction)
 - Focus: AI, Robotics, and Software Systems
 
-**Methodist College Kuala Lumpur** | *A Levels*
-- Strong foundation in mathematics, physics, and computer science
-
 ## 🚀 Current Projects & Leadership
 
 ### Team Robo - ICRA BARN Challenge 2026
