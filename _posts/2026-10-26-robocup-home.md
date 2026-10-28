@@ -6,14 +6,14 @@ categories: [Competitions, Human-Robot Interaction]
 tags: [robocup, perception, speech, ros2, point-cloud]
 image:
   path: /assets/img/projects/robocup/custom-robot-openarm-cad.jpg
-  alt: CAD views of the team's self-built mobile manipulator with OpenArm arms
+  alt: CAD views of the team's self-built wheeled humanoid with OpenArm arms
 ---
 
 [RoboCup@Home](https://athome.robocup.org/) is an embodied AI benchmark. A service robot has to perceive a real home, understand the people in it and act: greet guests, fetch objects, follow people and hold a conversation. I lead NTU's 34-member embodied AI team preparing for **RoboCup@Home 2027**. This page covers the robot and the parts of the software stack I built.
 
 ## The robot
 
-We develop on a **Galaxea R1** mobile manipulator: a Jetson AGX Orin running ROS 2 Humble, a RealSense D455 head camera, a Livox MID-360 LiDAR on the chassis, and a ReSpeaker microphone array. In parallel we're designing our own robot: a mecanum-wheel base, a vertical lift, and two OpenArm arms.
+We develop on a **Galaxea R1**, a wheeled humanoid: two arms on a lifting torso over a wheeled base, with a Jetson AGX Orin running ROS 2 Humble, a RealSense D455 head camera, a Livox MID-360 LiDAR on the chassis, and a ReSpeaker microphone array. In parallel we're designing our own robot: a mecanum-wheel base, a vertical lift, and two OpenArm arms.
 
 ![Early prototype CAD](/assets/img/projects/robocup/custom-robot-early-prototype-cad.jpg)
 _Early CAD prototype of the self-built robot: a mecanum base, a lift column and an arm._
