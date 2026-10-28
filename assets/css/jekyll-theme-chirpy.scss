@@ -71,20 +71,37 @@
   font-size: 0.95rem;
 }
 
-.news {
+/* Vertical timeline: a rule on the left with a dot per item */
+.timeline {
   list-style: none;
-  padding-left: 0;
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--main-border-color);
 
   li {
-    display: flex;
-    gap: 1rem;
-    padding: 0.3rem 0;
+    position: relative;
+    padding-bottom: 0.9rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(-1.25rem - 6px);
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--link-color);
+      box-shadow: 0 0 0 3px var(--main-bg);
+    }
   }
 
-  .news-date {
-    flex: 0 0 5rem;
+  .timeline-date {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     color: var(--text-muted-color);
-    font-variant-numeric: tabular-nums;
   }
 }
 
@@ -122,8 +139,41 @@
   }
 }
 
+/* Home page: compact roles as one bordered list */
+.experience-list {
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+
+  .experience-compact {
+    margin: 0;
+    padding: 0.9rem 1rem;
+
+    & + .experience-compact {
+      border-top: 1px solid var(--main-border-color);
+    }
+  }
+
+  .experience-head {
+    align-items: baseline;
+    row-gap: 0.25rem;
+  }
+
+  .experience-role {
+    font-size: 0.92rem;
+  }
+
+  .experience-summary {
+    font-size: 0.95rem;
+  }
+}
+
 .publication {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
 
   &.has-image {
     display: grid;
@@ -137,12 +187,23 @@
     border-radius: 0.5rem;
   }
 
+  .badge-row {
+    margin-bottom: 0.4rem;
+  }
+
   .publication-title {
     font-weight: 600;
+    line-height: 1.35;
     color: var(--heading-color);
   }
 
+  .publication-authors {
+    margin-top: 0.3rem;
+    font-size: 0.92rem;
+  }
+
   .publication-venue {
+    font-size: 0.9rem;
     font-style: italic;
     color: var(--text-muted-color);
   }
@@ -150,6 +211,12 @@
   .publication-summary {
     margin: 0.4rem 0 0;
     font-size: 0.95rem;
+  }
+
+  .publication-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 576px) {
@@ -167,9 +234,16 @@
 }
 
 .project-card {
+  color: var(--text-color); /* Bootstrap's .card text colour is fixed dark, unreadable in dark mode */
   background: var(--card-bg);
   border-color: var(--main-border-color);
   overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
 
   .project-img {
     width: 100%;
@@ -178,17 +252,63 @@
     background: var(--img-bg);
   }
 
+  .project-media {
+    position: relative;
+  }
+
+  .project-img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: color-mix(in srgb, var(--link-color) 55%, var(--card-bg));
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--link-color) 20%, var(--card-bg)),
+      color-mix(in srgb, var(--link-color) 4%, var(--card-bg))
+    );
+  }
+
+  .project-metric {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+  }
+
+  .project-metric-inline {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    color: var(--link-color);
+    background: color-mix(in srgb, var(--link-color) 14%, transparent);
+  }
+
   .card-body {
     height: 100%;
   }
 
   .card-title {
+    color: var(--heading-color);
     font-size: 1.05rem;
     margin: 0 0 0.5rem;
   }
 
   .card-text {
     font-size: 0.93rem;
+  }
+
+  .landing & .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .project-stack {
@@ -253,4 +373,125 @@
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--text-muted-color);
+}
+
+/* ---------- small components: badges, stat cards, disclosures ---------- */
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-style: normal;
+  white-space: nowrap;
+  color: var(--text-muted-color);
+  background: var(--inline-code-bg);
+
+  &.badge-accent {
+    font-weight: 600;
+    color: var(--link-color);
+    background: color-mix(in srgb, var(--link-color) 14%, transparent);
+  }
+}
+
+.hero .hero-badges {
+  margin-bottom: 1.25rem;
+
+  .badge-pill {
+    white-space: normal;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--heading-color);
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: var(--text-muted-color);
+  }
+}
+
+a.stat-card {
+  text-decoration: none;
+  border-bottom: 1px solid var(--main-border-color);
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--link-color);
+  }
+}
+
+/* Native <details> styled as a small accordion */
+.disclosure {
+  margin-top: 0.4rem;
+
+  > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.88rem;
+    color: var(--link-color);
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      width: 0.4rem;
+      height: 0.4rem;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &[open] > summary::before {
+    transform: rotate(45deg);
+  }
+
+  > ul,
+  > ol,
+  > p {
+    margin-top: 0.5rem;
+  }
 }

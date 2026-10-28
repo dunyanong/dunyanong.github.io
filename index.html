@@ -7,8 +7,20 @@ layout: home
   <p class="hero-lede">
     Final-year Electrical &amp; Electronic Engineering student at NTU Singapore, working on
     <strong>multi-robot systems</strong>, <strong>scene understanding</strong> and <strong>robot perception</strong>.
-    Researcher at the SJTU Robotics Autonomy and Planning Lab, and team lead of NTU's ICRA BARN navigation team and RoboCup@Home embodied AI team.
   </p>
+  <div class="badge-row hero-badges">
+    <span class="badge-pill"><i class="fas fa-flask"></i> Researcher, SJTU Robotics Autonomy and Planning Lab</span>
+    <span class="badge-pill"><i class="fas fa-users"></i> Team Lead, ROBO@EEE</span>
+    <span class="badge-pill"><i class="fas fa-graduation-cap"></i> NTU EEE '27 · CGPA 4.71/5</span>
+  </div>
+  <div class="stat-grid">
+    {% for h in site.data.highlights %}
+      {% if h.link %}<a class="stat-card" href="{{ h.link | relative_url }}">{% else %}<div class="stat-card">{% endif %}
+        <span class="stat-value">{{ h.value }}</span>
+        <span class="stat-label">{{ h.label }}</span>
+      {% if h.link %}</a>{% else %}</div>{% endif %}
+    {% endfor %}
+  </div>
   <div class="hero-links">
     <a class="btn btn-primary" href="{{ '/assets/files/ong_dun_yan_cv.pdf' | relative_url }}"><i class="far fa-file-pdf"></i> CV</a>
     <a class="btn btn-outline-secondary" href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i> Email</a>
@@ -19,19 +31,21 @@ layout: home
 
 <section>
   <h2>News</h2>
-  <ul class="news">
-    {% for n in site.data.news %}
-      <li><span class="news-date">{{ n.date }}</span><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+  <ol class="timeline">
+    {% for n in site.data.news limit: 4 %}
+      <li><span class="timeline-date">{{ n.date }}</span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
     {% endfor %}
-  </ul>
-</section>
-
-<section>
-  <h2>Experience</h2>
-  {% for e in site.data.experience.research limit: 3 %}
-    {% include experience-entry.html entry=e compact=true %}
-  {% endfor %}
-  <a class="section-more" href="{{ '/experience/' | relative_url }}">Full experience, education and skills <i class="fas fa-angle-right"></i></a>
+  </ol>
+  {% if site.data.news.size > 4 %}
+    <details class="disclosure">
+      <summary>Older news</summary>
+      <ol class="timeline">
+        {% for n in site.data.news offset: 4 %}
+          <li><span class="timeline-date">{{ n.date }}</span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {% endfor %}
+      </ol>
+    </details>
+  {% endif %}
 </section>
 
 <section>
@@ -42,19 +56,12 @@ layout: home
 </section>
 
 <section>
-  <h2>Competitions &amp; Leadership</h2>
-  {% for e in site.data.experience.leadership %}
-    {% include experience-entry.html entry=e %}
-  {% endfor %}
-</section>
-
-<section>
   <h2>Selected Projects</h2>
   <div class="project-grid">
     {% for group in site.data.projects %}
       {% for p in group.items %}
         {% if p.featured %}
-          {% include project-card.html project=p %}
+          {% include project-card.html project=p placeholder=true %}
         {% endif %}
       {% endfor %}
     {% endfor %}
@@ -63,8 +70,14 @@ layout: home
 </section>
 
 <section>
-  <h2>Education</h2>
-  {% for e in site.data.experience.education %}
-    {% include experience-entry.html entry=e compact=true %}
-  {% endfor %}
+  <h2>Experience</h2>
+  <div class="experience-list">
+    {% for e in site.data.experience.research limit: 3 %}
+      {% include experience-entry.html entry=e compact=true %}
+    {% endfor %}
+    {% for e in site.data.experience.leadership %}
+      {% include experience-entry.html entry=e compact=true %}
+    {% endfor %}
+  </div>
+  <a class="section-more" href="{{ '/experience/' | relative_url }}">Full experience, education and skills <i class="fas fa-angle-right"></i></a>
 </section>

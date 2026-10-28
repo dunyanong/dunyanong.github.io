@@ -42,6 +42,7 @@ leadership:
   - org: ROBO@EEE (NTU robotics competition team)
     role: Executive Team Lead
     dates: Aug 2025 – Present
+    summary: "Lead the ICRA BARN navigation team (**3rd in the physical final**) and a **34-member** RoboCup@Home embodied AI team."
     points:
       - "Led an 8-member team on autonomous navigation for the [IEEE ICRA BARN Challenge 2026](https://2026.ieee-icra.org/program/competitions/#thebarnchallenge): **1st all-time in dynamic environments**, 6th in static environments, **3rd in the physical final**."
       - "Leading a **34-member embodied AI team** building a home-service wheeled humanoid for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
@@ -49,6 +50,7 @@ leadership:
   - org: Archimedes Autonomous Vehicles (NTU)
     role: Team member, autonomous maritime systems for RobotX 2026
     dates: Jan 2025 – Oct 2025
+    summary: "YOLO perception, ROS 2 navigation and electrical CAD for NTU's autonomous surface vessel."
     points:
       - "Worked on real-time YOLO object detection for the autonomous surface vessel."
       - "Worked on autonomous navigation software in ROS 2 Jazzy and Gazebo."

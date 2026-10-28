@@ -1,13 +1,27 @@
-<!-- One publication. Params: pub (an item from _data/publications.yml) -->
+<!-- One publication card. Params: pub (an item from _data/publications.yml; optional venue_short, status, authors_short) -->
 {% assign pub = include.pub %}
 <div class="publication{% if pub.image %} has-image{% endif %}">
   {% if pub.image %}
     <img src="{{ pub.image | relative_url }}" alt="{{ pub.image_alt | default: pub.title }}">
   {% endif %}
   <div>
+    {% if pub.venue_short or pub.status %}
+      <div class="badge-row">
+        {% if pub.venue_short %}<span class="badge-pill badge-accent">{{ pub.venue_short }}</span>{% endif %}
+        {% if pub.status %}<span class="badge-pill">{{ pub.status }}</span>{% endif %}
+      </div>
+    {% endif %}
     <div class="publication-title">{% if pub.post %}<a href="{{ pub.post | relative_url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
-    <div class="publication-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    <div class="publication-authors">{{ pub.authors_short | default: pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
     <div class="publication-venue">{{ pub.venue }}</div>
-    {% if pub.summary %}<p class="publication-summary">{{ pub.summary }}</p>{% endif %}
+    {% if pub.summary %}
+      <details class="disclosure">
+        <summary>Summary</summary>
+        <p class="publication-summary">{{ pub.summary }}</p>
+      </details>
+    {% endif %}
+    {% if pub.post %}
+      <a class="publication-more" href="{{ pub.post | relative_url }}">Read the write-up <i class="fas fa-angle-right"></i></a>
+    {% endif %}
   </div>
 </div>

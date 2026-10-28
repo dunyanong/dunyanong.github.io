@@ -1,5 +1,6 @@
 # Projects grouped by theme. `featured: true` puts a project on the home page.
-# Projects without `repo` render as "Code private".
+# Projects without `repo` render as "Code private". `metric` is an optional short result badge;
+# `icon` (Font Awesome classes) fills the home-page card header when there is no `image`.
 - theme: Research
   items:
     - name: VADER — Multi-Robot Navigation in Unknown Environments
@@ -13,6 +14,8 @@
       post: /posts/vader/#robotarium
       image: /assets/img/projects/vader/robotarium-8-robots.gif
     - name: ST-AVL — Gaze Attention Grounding
+      icon: fas fa-eye
+      metric: "No wearables"
       summary: "Side project: which object is a person looking at, from two cheap cameras and no wearables? A 3D gaze ray built up as evidence in a spatio-temporal voxel grid."
       stack: [C++, Python, ROS 2, Gaze Estimation]
       post: /posts/st-avl-gaze-grounding/
@@ -21,6 +24,7 @@
 - theme: ICRA BARN Challenge 2026
   items:
     - name: NMPC Navigation Stack
+      metric: "3rd · ICRA 2026 final"
       summary: "Nonlinear MPC in acados that handles static walls and up to ten tracked moving obstacles in one optimisation. 3rd in the physical finals at ICRA 2026, Vienna."
       stack: [C++, acados, ROS, Optimal Control]
       repo: https://github.com/Team-Robo/core-mode_switching_mpc_2026
@@ -38,18 +42,22 @@
 - theme: Embodied AI — RoboCup@Home 2027
   items:
     - name: Free-Seat Detection
+      metric: "CPU-only on Jetson"
       summary: "Finds seats in 3D, remembers them while people hide them, and only offers a seat it is sure is free. CPU only, on the robot's Jetson Orin."
       stack: [Python, ROS 2, YOLO, RGB-D]
       post: /posts/robocup-home/
       image: /assets/img/projects/robocup/seat-detection-output.jpg
       featured: true
     - name: 6-DoF Object Pose via MAC Registration
+      metric: "CVPR'23 method"
       summary: "Registers a known object against the live RealSense cloud with maximal-clique registration (CVPR'23). A quality gate rejects doubtful poses."
       stack: [C++, ROS 2, PCL, Point Cloud Registration]
       post: /posts/robocup-home/
       image: /assets/img/projects/robocup/mac-registration.gif
       featured: true
     - name: Offline Speech Commands
+      icon: fas fa-microphone
+      metric: "Fully offline"
       summary: "On-robot Whisper speech recognition with intent parsing. Returns ACCEPT, CONFIRM or REJECT, so a misheard word costs one confirmation, not a repeat."
       stack: [C++, ROS 2, Whisper]
       post: /posts/robocup-home/
@@ -76,6 +84,8 @@
 - theme: Industry
   items:
     - name: Camera Obstacle Detection (Hyundai)
+      icon: fas fa-camera
+      metric: "~100% detection, 0 FP"
       summary: "Covers 2D-LiDAR blind spots with a depth camera: nearly 100% detection, zero false positives, over 15 Hz on CPU."
       stack: [RGB-D, SLAM, Nav2]
       post: /posts/hyundai-camera-obstacle-detection/

@@ -1,13 +1,26 @@
-<!-- One role. Params: entry (an item from _data/experience.yml), compact (true = one-line summary only) -->
+<!-- One role. Params: entry (an item from _data/experience.yml), compact (true = one-line summary, points folded into a disclosure) -->
 {% assign e = include.entry %}
-<div class="experience-entry">
+<div class="experience-entry{% if include.compact %} experience-compact{% endif %}">
   <div class="experience-head">
     <span class="experience-org">{{ e.org }}</span>
-    {% if e.dates %}<span class="experience-dates">{{ e.dates }}</span>{% endif %}
+    {% if e.dates %}<span class="experience-dates{% if include.compact %} badge-pill{% endif %}">{{ e.dates }}</span>{% endif %}
   </div>
   <div class="experience-role">{{ e.role }}</div>
   {% if include.compact %}
     {% if e.summary %}<p class="experience-summary">{{ e.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+    {% if e.points %}
+      <details class="disclosure">
+        <summary>Details</summary>
+        <ul>
+          {% for pt in e.points %}
+            <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+          {% endfor %}
+        </ul>
+        {% if e.post %}
+          <a class="experience-more" href="{{ e.post | relative_url }}">Read more <i class="fas fa-angle-right"></i></a>
+        {% endif %}
+      </details>
+    {% endif %}
   {% elsif e.points %}
     <ul>
       {% for pt in e.points %}
