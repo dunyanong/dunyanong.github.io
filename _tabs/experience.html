@@ -17,6 +17,11 @@ order: 2
   {% include experience-entry.html entry=e %}
 {% endfor %}
 
+<h2>Software Engineering</h2>
+{% for e in site.data.experience.software %}
+  {% include experience-entry.html entry=e %}
+{% endfor %}
+
 <h2>Education</h2>
 <div class="experience-entry">
   <div class="experience-head">
@@ -39,10 +44,3 @@ order: 2
   <dt>Hardware</dt><dd>NVIDIA Jetson, STM32, ESP32, Arduino, Intel RealSense, ZED, Orbbec, Hokuyo, Livox Mid-360, Velodyne VLP</dd>
   <dt>Languages</dt><dd>English, Mandarin, Cantonese, Malay</dd>
 </dl>
-
-<details class="earlier">
-  <summary>Earlier software engineering</summary>
-  {% for e in site.data.experience.software %}
-    {% include experience-entry.html entry=e %}
-  {% endfor %}
-</details>

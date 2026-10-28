@@ -237,16 +237,6 @@
   }
 }
 
-details.earlier {
-  margin-top: 2.5rem;
-
-  summary {
-    cursor: pointer;
-    margin-bottom: 1rem;
-    color: var(--text-muted-color);
-  }
-}
-
 /* Chirpy wraps home-page images in a fixed-ratio .preview-img box; let our images size themselves */
 .landing .preview-img {
   aspect-ratio: auto;
