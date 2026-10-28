@@ -63,7 +63,7 @@ To grasp a known object, the arm needs its full position and orientation. I buil
 
 The node publishes the object's pose in the camera frame. A quality gate rejects unreliable estimates: when a frame fails the gate, nothing is published, rather than a doubtful pose.
 
-![MAC registration steps](/assets/img/projects/mac_registration.gif)
+![MAC registration steps](/assets/img/projects/robocup/mac-registration.gif)
 _Registration steps: input correspondences, then the compatibility graph, then the maximal clique that decides the pose._
 
 ## Offline speech commands

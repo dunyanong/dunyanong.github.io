@@ -47,7 +47,7 @@
       summary: "Registers a known object against the live RealSense cloud with maximal-clique registration (CVPR'23). A quality gate rejects doubtful poses."
       stack: [C++, ROS 2, PCL, Point Cloud Registration]
       post: /posts/robocup-home/
-      image: /assets/img/projects/mac_registration.gif
+      image: /assets/img/projects/robocup/mac-registration.gif
       featured: true
     - name: Offline Speech Commands
       summary: "On-robot Whisper speech recognition with intent parsing. Returns ACCEPT, CONFIRM or REJECT, so a misheard word costs one confirmation, not a repeat."
@@ -83,7 +83,7 @@
       stack: [C++, OpenCV, Search]
       repo: https://github.com/dunyanong/conflict-based-search
       post: /posts/multi-agent-path-finding/
-      image: /assets/img/dy04/mapf_toy.gif
+      image: /assets/img/projects/cbs/toy.gif
     - name: Frontier-Based Exploration
       summary: "Exploration of unknown maps in ROS, built without the navigation stack: OctoMap, frontier clustering, A* and fallback behaviours."
       stack: [C++, ROS, OctoMap]
