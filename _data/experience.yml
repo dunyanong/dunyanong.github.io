@@ -2,7 +2,7 @@
 # `summary` is the one-liner shown on the home page; `points` appear on the Experience page.
 research:
   - org: Shanghai Jiao Tong University — Robotics Autonomy and Planning Lab
-    role: Undergraduate Researcher, multi-robot navigation in unknown environments
+    role: Undergraduate Researcher, multi-robot systems
     dates: Oct 2025 – Present
     summary: "Built VADER, a decentralized multi-robot navigation framework (first-author ICRA 2027 submission)."
     post: /posts/vader/
