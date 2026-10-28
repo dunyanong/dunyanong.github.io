@@ -4,11 +4,11 @@ research:
   - org: Shanghai Jiao Tong University — Robotics Autonomy and Planning Lab
     role: Undergraduate Researcher, multi-robot systems
     dates: Oct 2025 – Present
-    summary: "Built VADER, a decentralized multi-robot navigation framework (first-author ICRA 2027 submission)."
+    summary: "Built VADER, a decentralized multi-robot navigation framework for unknown environments (first-author ICRA 2027 submission)."
     post: /posts/vader/
     points:
       - "Supervised by [Prof. Zhongqiang (Richard) Ren](https://wonderren.github.io/), co-supervised by [Dr. Shenghai Yuan](https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en)."
-      - "Developed VADER: robots merge visibility graphs on encounter and jointly schedule routes and passage order via conflict-based search over a space-time visibility graph."
+      - "Developed VADER for multi-robot navigation in unknown environments: robots merge visibility graphs on encounter and jointly schedule routes and passage order via conflict-based search over a space-time visibility graph."
       - "Evaluated in ROS/Gazebo across 4 environments with 2–10 robots: **87% all-robot success vs. 53%** for the strongest reactive baseline; validated on 4–8 Robotarium robots."
   - org: Hyundai Motor Group Innovation Center Singapore
     role: Robotics SLAM Intern, perception and localisation for autonomous mobile robots

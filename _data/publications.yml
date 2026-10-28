@@ -4,7 +4,7 @@
   summary: "Robots merge their visibility graphs when they meet, then jointly schedule routes and passage order with conflict-based search over a space-time visibility graph. 87% all-robot success vs. 53% for the strongest reactive baseline across 4 environments with 2–10 robots; validated on 4–8 Robotarium robots."
   image: /assets/img/projects/vader/warehouse-4-robots.gif
   post: /posts/vader/
-  image_alt: "VADER: four robots coordinating in a warehouse"
+  image_alt: "VADER: four robots navigating an unknown warehouse environment"
 - title: "Autonomous Ground Navigation in Highly Constrained Spaces: Lessons Learned from the Fifth BARN Challenge at ICRA 2026"
   authors: "Xuesu Xiao, Zifan Xu, Saad Abdul Ghani, Daeun Song, Alexandyr Card, Nhat Le, Peter Stone, Yunting Ji, Zihao Mao, Wenchao Zhang, Xiangyi Meng, Shenglin Li, Hahjin Lee, Jiyoung Park, Young J. Kim, **Dun Yan Ong**, Jin You Chan, Jason Wai Hao Yee, Wenda Chang, Nguyen Khiem, Yinuo Qu, Yoonchang Sung"
   summary: "The organisers' report on the competition, including the approaches of the three winning teams. Our NMPC stack is described in the Team Robo section."

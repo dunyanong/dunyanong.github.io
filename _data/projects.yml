@@ -2,8 +2,8 @@
 # Projects without `repo` render as "Code private".
 - theme: Research
   items:
-    - name: VADER — Decentralized Multi-Robot Navigation
-      summary: "Robots merge their visibility graphs when they meet and jointly schedule who passes first. 87% all-robot success vs. 53% for the best reactive baseline. First-author ICRA 2027 submission."
+    - name: VADER — Multi-Robot Navigation in Unknown Environments
+      summary: "Decentralized navigation for robot teams in unknown environments: robots merge their visibility graphs when they meet and jointly schedule who passes first. 87% all-robot success vs. 53% for the best reactive baseline. First-author ICRA 2027 submission."
       stack: [C++, ROS, CBS, Visibility Graphs]
       post: /posts/vader/
       image: /assets/img/projects/vader/warehouse-4-robots.gif
