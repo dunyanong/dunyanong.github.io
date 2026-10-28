@@ -1,4 +1,4 @@
-<!-- A project card. Params: project (an item from _data/projects.yml) -->
+<!-- A project card. Params: project (an item from _data/projects.yml; optional repo, post, link + link_label) -->
 {% assign p = include.project %}
 <div class="card project-card">
   {% if p.image %}
@@ -13,8 +13,11 @@
     <div class="project-links">
       {% if p.repo %}
         <a href="{{ p.repo }}"><i class="fab fa-github"></i> Code</a>
-      {% else %}
+      {% elsif p.link == nil %}
         <span class="text-muted"><i class="fas fa-lock"></i> Code private</span>
+      {% endif %}
+      {% if p.link %}
+        <a href="{{ p.link }}"><i class="fas fa-arrow-up-right-from-square"></i> {{ p.link_label | default: 'Link' }}</a>
       {% endif %}
       {% if p.post %}
         <a href="{{ p.post | relative_url }}"><i class="far fa-file-alt"></i> Write-up</a>

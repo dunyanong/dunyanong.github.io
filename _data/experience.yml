@@ -46,6 +46,13 @@ leadership:
       - "Led an 8-member team on autonomous navigation for the [IEEE ICRA BARN Challenge 2026](https://2026.ieee-icra.org/program/competitions/#thebarnchallenge): **1st all-time in dynamic environments**, 6th in static environments, **3rd in the physical final**."
       - "Leading a **34-member embodied AI team** building a home-service wheeled humanoid for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
     post: /posts/barn-2026/
+  - org: Archimedes Autonomous Vehicles (NTU)
+    role: Team member, autonomous maritime systems for RobotX 2026
+    points:
+      - "Worked on real-time YOLO object detection for the autonomous surface vessel."
+      - "Worked on autonomous navigation software in ROS 2 Jazzy and Gazebo."
+      - "CAD design of electrical components."
+      - "Presented the team's ASV and UAV to students at NTU's [Live It Up! STEM showcase](https://www.linkedin.com/posts/litzyuan_asv-uav-stem-ugcPost-7363427166555918336-nj4m/) (Aug 2025)."
 
 software:
   - org: Halogen Capital

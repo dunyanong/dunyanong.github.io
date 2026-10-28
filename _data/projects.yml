@@ -64,6 +64,15 @@
       stack: [Python, ROS 2, PyTorch]
       repo: https://github.com/Team-Robo/archived-perc-l2cs_gaze_perception
 
+- theme: Autonomous Maritime Systems — RobotX 2026
+  items:
+    - name: Team Archimedes
+      summary: "NTU's RobotX team, building an autonomous surface vessel and drone. I contributed YOLO perception, ROS 2 / Gazebo navigation and CAD of electrical components, and presented the vehicles at an outreach event."
+      stack: [Python, ROS 2, YOLO, Gazebo, CAD]
+      image: /assets/img/projects/archimedes/outreach-booth.jpg
+      link: https://www.linkedin.com/posts/litzyuan_asv-uav-stem-ugcPost-7363427166555918336-nj4m/
+      link_label: Outreach post
+
 - theme: Industry
   items:
     - name: Camera Obstacle Detection (Hyundai)
