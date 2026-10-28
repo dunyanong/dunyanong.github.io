@@ -8,10 +8,10 @@
       post: /posts/vader/
       image: /assets/img/projects/vader/warehouse-4-robots.gif
     - name: VADER on the Robotarium
-      summary: "The same planner running remotely on Georgia Tech's Robotarium with 4–8 real robots. Every robot reached its goal in every trial, with no contacts."
+      summary: "The same planner running remotely on Georgia Tech's Robotarium with 4–8 real robots. Every robot reached its goal in every trial."
       stack: [Python, Multi-Robot, Real Robots]
       post: /posts/vader/#robotarium
-      image: /assets/img/projects/vader/robotarium-8-robots.jpg
+      image: /assets/img/projects/vader/robotarium-8-robots.gif
     - name: ST-AVL — Gaze Attention Grounding
       summary: "Side project: which object is a person looking at, from two cheap cameras and no wearables? A 3D gaze ray built up as evidence in a spatio-temporal voxel grid."
       stack: [C++, Python, ROS 2, Gaze Estimation]
@@ -68,7 +68,7 @@
   items:
     - name: Camera Obstacle Detection (Hyundai)
       summary: "Covers 2D-LiDAR blind spots with a depth camera: nearly 100% detection, zero false positives, over 15 Hz on CPU."
-      stack: [C++, PCL, RGB-D, Nav2]
+      stack: [RGB-D, SLAM, Nav2]
       post: /posts/hyundai-camera-obstacle-detection/
       featured: true
     - name: Robot Self-Occlusion Removal (A*STAR)
