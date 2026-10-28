@@ -1,10 +1,13 @@
-<!-- A project card. Params: project (an item from _data/projects.yml; optional repo, post, link + link_label, metric, icon),
+<!-- A project card. Params: project (an item from _data/projects.yml; optional repo, post, link + link_label, metric, icon,
+     video + poster for a silent looping clip in place of the image),
      placeholder (true = icon header when the project has no image) -->
 {% assign p = include.project %}
 <div class="card project-card">
-  {% if p.image or include.placeholder %}
+  {% if p.video or p.image or include.placeholder %}
     <div class="project-media">
-      {% if p.image %}
+      {% if p.video %}
+        <video class="project-img" src="{{ p.video | relative_url }}"{% if p.poster %} poster="{{ p.poster | relative_url }}"{% endif %} autoplay muted loop playsinline preload="metadata" aria-label="{{ p.name }}"></video>
+      {% elsif p.image %}
         <img src="{{ p.image | relative_url }}" alt="{{ p.name }}" class="project-img">
       {% else %}
         <div class="project-img project-img-placeholder"><i class="{{ p.icon | default: 'fas fa-robot' }}"></i></div>
@@ -13,7 +16,7 @@
     </div>
   {% endif %}
   <div class="card-body d-flex flex-column">
-    {% unless p.image or include.placeholder %}
+    {% unless p.video or p.image or include.placeholder %}
       {% if p.metric %}<span class="project-metric project-metric-inline">{{ p.metric }}</span>{% endif %}
     {% endunless %}
     <h3 class="card-title">{{ p.name }}</h3>

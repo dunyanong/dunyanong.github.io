@@ -56,11 +56,12 @@
       image: /assets/img/projects/robocup/mac-registration.gif
       featured: true
     - name: Offline Speech Commands
-      icon: fas fa-microphone
       metric: "Fully offline"
-      summary: "On-robot Whisper speech recognition with intent parsing. Returns ACCEPT, CONFIRM or REJECT, so a misheard word costs one confirmation, not a repeat."
+      summary: "On-robot Whisper speech recognition with intent parsing. Returns ACCEPT, CONFIRM or REJECT, so a misheard word costs one confirmation, not a repeat. The robot's face screen reacts as it listens and replies."
       stack: [C++, ROS 2, Whisper]
       post: /posts/robocup-home/
+      video: /assets/img/projects/robocup/speech-preview.mp4
+      poster: /assets/img/projects/robocup/speech-preview-poster.jpg
       featured: true
     - name: Self-Built Wheeled Humanoid
       summary: "Hardware by Aqid, Jing Yang and the hardware team: our own robot, with a mecanum base, a vertical lift and two OpenArm arms, alongside the Galaxea R1 we develop on today."

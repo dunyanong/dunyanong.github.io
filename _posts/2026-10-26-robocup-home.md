@@ -72,6 +72,9 @@ Competition venues have unreliable internet, and judges' commands must be unders
 
 `microphone → voice activity detection → Whisper (whisper.cpp) → intent and slot parsing → verdict`
 
+<video class="portrait-video" src="/assets/img/projects/robocup/speech-demo.mp4" poster="/assets/img/projects/robocup/speech-poster.jpg" controls playsinline preload="metadata"></video>
+_The robot taking spoken commands. Its face screen reacts as it listens and replies._
+
 The verdict matters most. For *"take the milk from the dinner table"*, the parser returns action `take`, object `milk`, place `dinner table`, and **ACCEPT**. If it mishears one word, it returns **CONFIRM** with the word it couldn't place, so the operator fixes one word instead of repeating the sentence. If it can't make sense of the sentence, it returns **REJECT** and asks again.
 
 Two confidence scores catch different failures:
