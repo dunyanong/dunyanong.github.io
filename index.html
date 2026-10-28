@@ -9,17 +9,9 @@ layout: home
     <strong>multi-robot systems</strong>, <strong>scene understanding</strong> and <strong>robot perception</strong>.
   </p>
   <div class="badge-row hero-badges">
-    <span class="badge-pill"><i class="fas fa-flask"></i> Researcher, SJTU Robotics Autonomy and Planning Lab</span>
-    <span class="badge-pill"><i class="fas fa-users"></i> Team Lead, ROBO@EEE</span>
-    <span class="badge-pill"><i class="fas fa-graduation-cap"></i> NTU EEE '27 · CGPA 4.71/5</span>
-  </div>
-  <div class="stat-grid">
-    {% for h in site.data.highlights %}
-      {% if h.link %}<a class="stat-card" href="{{ h.link | relative_url }}">{% else %}<div class="stat-card">{% endif %}
-        <span class="stat-value">{{ h.value }}</span>
-        <span class="stat-label">{{ h.label }}</span>
-      {% if h.link %}</a>{% else %}</div>{% endif %}
-    {% endfor %}
+    <span class="badge-pill">Researcher, SJTU Robotics Autonomy and Planning Lab</span>
+    <span class="badge-pill">Team Lead, ROBO@EEE</span>
+    <span class="badge-pill">NTU EEE '27 · CGPA 4.71/5</span>
   </div>
   <div class="hero-links">
     <a class="btn btn-primary" href="{{ '/assets/files/ong_dun_yan_cv.pdf' | relative_url }}"><i class="far fa-file-pdf"></i> CV</a>
