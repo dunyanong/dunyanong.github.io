@@ -1,0 +1,65 @@
+# Research and industry roles, newest first.
+# `summary` is the one-liner shown on the home page; `points` appear on the Experience page.
+research:
+  - org: Shanghai Jiao Tong University — Robotics Autonomy and Planning Lab
+    role: Undergraduate Researcher, multi-robot navigation in unknown environments
+    dates: Oct 2025 – Present
+    summary: "Built VADER, a decentralized multi-robot navigation framework (first-author ICRA 2027 submission)."
+    points:
+      - "Supervised by [Prof. Zhongqiang (Richard) Ren](https://wonderren.github.io/), co-supervised by [Dr. Shenghai Yuan](https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en)."
+      - "Developed VADER: robots merge visibility graphs on encounter and jointly schedule routes and passage order via conflict-based search over a space-time visibility graph."
+      - "Evaluated in ROS/Gazebo across 4 environments with 2–10 robots: **87% all-robot success vs. 53%** for the strongest reactive baseline; validated on 4–8 Robotarium robots."
+  - org: Hyundai Motor Group Innovation Center Singapore
+    role: Robotics SLAM Intern, perception and localisation for autonomous mobile robots
+    dates: Jan 2026 – May 2026
+    summary: "Camera-based obstacle detection covering 2D LiDAR blind spots: near-100% detection, zero false positives, >15 Hz on CPU."
+    points:
+      - "Researched real-time camera-based obstacle detection with Orbbec Gemini 2 and Femto Bolt to cover 2D LiDAR blind spots (>15 Hz, CPU only)."
+      - "Achieved **nearly 100% detection success with zero false positives** across floor conditions."
+      - "Worked on Cartographer SLAM, AMCL localisation and Nav2 navigation testing; reported trade-off analyses to Korea HQ."
+  - org: Agency for Science, Technology and Research (A*STAR)
+    role: Robotics and AI Intern, scene understanding for human–robot collision avoidance
+    dates: May 2025 – Aug 2025
+    summary: "PointNet segmentation for robot occlusion removal on a UR16e: 98.79% test accuracy, 98% IoU."
+    points:
+      - "Designed and deployed scene-understanding algorithms on ZED 2i point clouds."
+      - "Trained a PointNet (PyTorch) segmentation model for robot occlusion removal: **98.79% test accuracy**, 98% IoU on a custom 583-sample dataset."
+      - "Used forward and inverse kinematics to generate UR16e arm meshes and align them with point clouds in PCL."
+  - org: Nanyang Technological University — URECA
+    role: Undergraduate Research Assistant, wireless motor system
+    dates: Aug 2024 – May 2025
+    summary: "Wireless power transfer motor drive with SPWM control; President's Research Scholar."
+    post: /posts/ureca-research/
+    points:
+      - "Supervised by Prof. Christopher H. T. Lee."
+      - "Developed a wireless motor system using wireless power transfer, with SPWM control of speed and torque."
+      - "Awarded **President's Research Scholar**."
+
+leadership:
+  - org: ROBO@EEE (NTU robotics competition team)
+    role: Executive Team Lead
+    dates: Aug 2025 – Present
+    points:
+      - "Led an 8-member team on autonomous navigation for the [IEEE ICRA BARN Challenge 2026](https://2026.ieee-icra.org/program/competitions/#thebarnchallenge): **1st all-time in dynamic environments**, 6th in static environments, **3rd in the physical final**."
+      - "Leading a **34-member team** building a mobile manipulator home robot for [RoboCup@Home 2027](https://athome.robocup.org/)."
+    post: /posts/team-robo-icra/
+
+software:
+  - org: Halogen Capital
+    role: Software Engineering Intern
+    dates: May 2024 – Aug 2024
+    points:
+      - "Built payment systems with AWS, Go, TypeScript, React and Node.js."
+  - org: DoctorOnCall
+    role: Software Engineering Intern
+    dates: Apr 2023 – Jun 2023
+    points:
+      - "Worked on cloud infrastructure, full-stack features and an LLM/ML project."
+
+activities:
+  - org: Team Archimedes
+    role: Member, autonomous maritime systems (RobotX)
+    post: /posts/team-archimedes/
+  - org: Garage@EEE
+    role: Training and Development Committee
+    post: /posts/garage-eee/
