@@ -1,0 +1,21 @@
+<!-- One role. Params: entry (an item from _data/experience.yml), compact (true = one-line summary only) -->
+{% assign e = include.entry %}
+<div class="experience-entry">
+  <div class="experience-head">
+    <span class="experience-org">{{ e.org }}</span>
+    {% if e.dates %}<span class="experience-dates">{{ e.dates }}</span>{% endif %}
+  </div>
+  <div class="experience-role">{{ e.role }}</div>
+  {% if include.compact %}
+    {% if e.summary %}<p class="experience-summary">{{ e.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+  {% elsif e.points %}
+    <ul>
+      {% for pt in e.points %}
+        <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if e.post and include.compact != true %}
+    <a class="experience-more" href="{{ e.post | relative_url }}">Read more <i class="fas fa-angle-right"></i></a>
+  {% endif %}
+</div>

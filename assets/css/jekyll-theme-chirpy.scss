@@ -1,0 +1,260 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+#avatar img {
+  object-fit: cover;
+  object-position: top;
+}
+
+/* ---------- landing page and portfolio tabs ---------- */
+
+.landing section,
+#core-wrapper .content {
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--main-border-color);
+    font-size: 1.35rem;
+  }
+}
+
+.landing section:first-child h2 {
+  margin-top: 0;
+}
+
+.hero {
+  padding-top: 1.5rem;
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-lede {
+    font-size: 1.08rem;
+    max-width: 46rem;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .btn {
+      font-size: 0.9rem;
+    }
+
+    .btn-outline-secondary {
+      color: var(--text-color);
+      border-color: var(--main-border-color);
+    }
+  }
+}
+
+.page-lede {
+  color: var(--text-muted-color);
+}
+
+.section-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.news {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.3rem 0;
+  }
+
+  .news-date {
+    flex: 0 0 5rem;
+    color: var(--text-muted-color);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.experience-entry {
+  margin-bottom: 1.25rem;
+
+  .experience-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+
+  .experience-org {
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .experience-dates,
+  .experience-role {
+    color: var(--text-muted-color);
+  }
+
+  .experience-role {
+    font-style: italic;
+  }
+
+  .experience-summary,
+  ul {
+    margin: 0.35rem 0 0;
+  }
+
+  .experience-more {
+    font-size: 0.9rem;
+  }
+}
+
+.publication {
+  margin-bottom: 1.5rem;
+
+  &.has-image {
+    display: grid;
+    grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .publication-title {
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .publication-venue {
+    font-style: italic;
+    color: var(--text-muted-color);
+  }
+
+  .publication-summary {
+    margin: 0.4rem 0 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 576px) {
+    &.has-image {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-color: var(--main-border-color);
+  overflow: hidden;
+
+  .project-img {
+    width: 100%;
+    aspect-ratio: 40 / 21;
+    object-fit: cover;
+    background: var(--img-bg);
+  }
+
+  .card-body {
+    height: 100%;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .card-text {
+    font-size: 0.93rem;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: auto;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-tag {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.78rem;
+    color: var(--text-muted-color);
+    background: var(--inline-code-bg);
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.25rem;
+  row-gap: 0.4rem;
+
+  dt {
+    color: var(--heading-color);
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+
+    dd {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+details.earlier {
+  margin-top: 2.5rem;
+
+  summary {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: var(--text-muted-color);
+  }
+}
+
+/* Chirpy wraps home-page images in a fixed-ratio .preview-img box; let our images size themselves */
+.landing .preview-img {
+  aspect-ratio: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+/* Keep blog widgets (recent posts, trending tags) off the landing page */
+#main-wrapper:has(.landing) #panel-wrapper .access {
+  display: none;
+}
