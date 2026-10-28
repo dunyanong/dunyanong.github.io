@@ -1,0 +1,18 @@
+---
+icon: fas fa-project-diagram
+order: 1
+---
+
+<p class="page-lede">
+  Most of this work was built with NTU's robotics team for the ICRA BARN Challenge and RoboCup@Home.
+  Team repositories that are still private are marked as such.
+</p>
+
+{% for group in site.data.projects %}
+  <h2>{{ group.theme }}</h2>
+  <div class="project-grid">
+    {% for p in group.items %}
+      {% include project-card.html project=p %}
+    {% endfor %}
+  </div>
+{% endfor %}
