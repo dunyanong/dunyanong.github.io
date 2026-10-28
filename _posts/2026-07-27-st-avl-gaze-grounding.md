@@ -1,5 +1,6 @@
 ---
 title: "ST-AVL: Grounding Where a Person Is Looking, Without Wearables"
+description: "ST-AVL: grounding which object a person is looking at from two cheap cameras, using a 3D gaze ray and a spatio-temporal voxel grid in ROS 2."
 date: 2026-07-27 12:00:00 +0800
 categories: [Side Projects, Human-Robot Interaction]
 tags: [gaze, hri, perception, ros2, point-cloud]

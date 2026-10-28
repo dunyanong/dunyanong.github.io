@@ -1,5 +1,6 @@
 ---
 title: "RoboCup@Home 2027: Perception and Speech for a Home Robot"
+description: "Perception and speech for NTU's RoboCup@Home 2027 robot: free-seat detection, 6-DoF object pose with MAC registration, and offline Whisper commands."
 date: 2026-10-26 12:00:00 +0800
 categories: [Competitions, Human-Robot Interaction]
 tags: [robocup, perception, speech, ros2, point-cloud]
