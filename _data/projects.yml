@@ -35,7 +35,7 @@
       summary: "move_base global planner that wraps costmap obstacles in polygons, links mutually visible corners and searches for the shortest route, even in unknown maps."
       stack: [C++, ROS, Visibility Graphs]
 
-- theme: RoboCup@Home 2027
+- theme: Embodied AI — RoboCup@Home 2027
   items:
     - name: Free-Seat Detection
       summary: "Finds seats in 3D, remembers them while people hide them, and only offers a seat it is sure is free. CPU only, on the robot's Jetson Orin."

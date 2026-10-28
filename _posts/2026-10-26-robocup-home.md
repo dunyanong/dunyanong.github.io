@@ -1,6 +1,6 @@
 ---
-title: "RoboCup@Home 2027: Perception and Speech for a Home Robot"
-description: "Perception and speech for NTU's RoboCup@Home 2027 robot: free-seat detection, 6-DoF object pose with MAC registration, and offline Whisper commands."
+title: "Embodied AI for RoboCup@Home 2027: Perception and Speech for a Home Robot"
+description: "Embodied AI for NTU's RoboCup@Home 2027 robot: free-seat detection, 6-DoF object pose with MAC registration, and offline Whisper speech commands."
 date: 2026-10-26 12:00:00 +0800
 categories: [Competitions, Human-Robot Interaction]
 tags: [robocup, perception, speech, ros2, point-cloud]
@@ -9,7 +9,7 @@ image:
   alt: CAD views of the team's self-built mobile manipulator with OpenArm arms
 ---
 
-[RoboCup@Home](https://athome.robocup.org/) tests service robots on household tasks: greeting guests, fetching objects, following people, and holding a conversation. I lead NTU's 34-member team preparing for **RoboCup@Home 2027**. This page covers the robot and the parts of the software stack I built.
+[RoboCup@Home](https://athome.robocup.org/) is an embodied AI benchmark. A service robot has to perceive a real home, understand the people in it and act: greet guests, fetch objects, follow people and hold a conversation. I lead NTU's 34-member embodied AI team preparing for **RoboCup@Home 2027**. This page covers the robot and the parts of the software stack I built.
 
 ## The robot
 

@@ -44,7 +44,7 @@ leadership:
     dates: Aug 2025 – Present
     points:
       - "Led an 8-member team on autonomous navigation for the [IEEE ICRA BARN Challenge 2026](https://2026.ieee-icra.org/program/competitions/#thebarnchallenge): **1st all-time in dynamic environments**, 6th in static environments, **3rd in the physical final**."
-      - "Leading a **34-member team** building a mobile manipulator home robot for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
+      - "Leading a **34-member embodied AI team** building a home-service mobile manipulator for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
     post: /posts/barn-2026/
 
 software:
