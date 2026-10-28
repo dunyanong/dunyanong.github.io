@@ -258,3 +258,9 @@ details.earlier {
 #main-wrapper:has(.landing) #panel-wrapper .access {
   display: none;
 }
+
+.hero .hero-alt-name {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-muted-color);
+}
