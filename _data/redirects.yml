@@ -1,0 +1,26 @@
+# Old URLs that no longer exist, and where they now point.
+# _plugins/redirect-generator.rb turns each entry into a small redirect page.
+- from: /posts/rap-lab-research/
+  to: /posts/vader/
+- from: /posts/team-robo-icra/
+  to: /posts/barn-2026/
+- from: /posts/sjtu-exchange/
+  to: /experience/
+- from: /posts/team-archimedes/
+  to: /projects/
+- from: /posts/garage-eee/
+  to: /projects/
+- from: /posts/hackathons/
+  to: /projects/
+- from: /posts/fvg-football/
+  to: /projects/
+- from: /posts/cnn-image-classification/
+  to: /projects/
+- from: /posts/mobile-turtle-bot/
+  to: /projects/
+- from: /about/
+  to: /
+- from: /archives/
+  to: /writing/
+- from: /blog/
+  to: /writing/
