@@ -25,7 +25,7 @@ order: 2
   </div>
   <div class="experience-role">B.Eng. Electrical and Electronic Engineering · CGPA 4.71/5.00 (expected First Class Honours)</div>
   <ul>
-    <li>Exchange semester at Shanghai Jiao Tong University (<a href="{{ '/posts/sjtu-exchange/' | relative_url }}">write-up</a>).</li>
+    <li>Exchange semester at Shanghai Jiao Tong University, Aug – Dec 2025.</li>
   </ul>
 </div>
 
@@ -41,11 +41,8 @@ order: 2
 </dl>
 
 <details class="earlier">
-  <summary>Earlier software engineering and activities</summary>
+  <summary>Earlier software engineering</summary>
   {% for e in site.data.experience.software %}
-    {% include experience-entry.html entry=e %}
-  {% endfor %}
-  {% for e in site.data.experience.activities %}
     {% include experience-entry.html entry=e %}
   {% endfor %}
 </details>

@@ -5,7 +5,7 @@
     <img src="{{ pub.image | relative_url }}" alt="{{ pub.image_alt | default: pub.title }}">
   {% endif %}
   <div>
-    <div class="publication-title">{{ pub.title }}</div>
+    <div class="publication-title">{% if pub.post %}<a href="{{ pub.post | relative_url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
     <div class="publication-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' }}</div>
     <div class="publication-venue">{{ pub.venue }}</div>
     {% if pub.summary %}<p class="publication-summary">{{ pub.summary }}</p>{% endif %}

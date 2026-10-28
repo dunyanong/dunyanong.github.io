@@ -14,7 +14,7 @@
       {% if p.repo %}
         <a href="{{ p.repo }}"><i class="fab fa-github"></i> Code</a>
       {% else %}
-        <span class="text-muted"><i class="fas fa-lock"></i> Team repo (private)</span>
+        <span class="text-muted"><i class="fas fa-lock"></i> Code private</span>
       {% endif %}
       {% if p.post %}
         <a href="{{ p.post | relative_url }}"><i class="far fa-file-alt"></i> Write-up</a>

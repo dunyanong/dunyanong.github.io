@@ -5,6 +5,7 @@ research:
     role: Undergraduate Researcher, multi-robot navigation in unknown environments
     dates: Oct 2025 – Present
     summary: "Built VADER, a decentralized multi-robot navigation framework (first-author ICRA 2027 submission)."
+    post: /posts/vader/
     points:
       - "Supervised by [Prof. Zhongqiang (Richard) Ren](https://wonderren.github.io/), co-supervised by [Dr. Shenghai Yuan](https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en)."
       - "Developed VADER: robots merge visibility graphs on encounter and jointly schedule routes and passage order via conflict-based search over a space-time visibility graph."
@@ -13,14 +14,16 @@ research:
     role: Robotics SLAM Intern, perception and localisation for autonomous mobile robots
     dates: Jan 2026 – May 2026
     summary: "Camera-based obstacle detection covering 2D LiDAR blind spots: near-100% detection, zero false positives, >15 Hz on CPU."
+    post: /posts/hyundai-camera-obstacle-detection/
     points:
       - "Researched real-time camera-based obstacle detection with Orbbec Gemini 2 and Femto Bolt to cover 2D LiDAR blind spots (>15 Hz, CPU only)."
       - "Achieved **nearly 100% detection success with zero false positives** across floor conditions."
       - "Worked on Cartographer SLAM, AMCL localisation and Nav2 navigation testing; reported trade-off analyses to Korea HQ."
-  - org: Agency for Science, Technology and Research (A*STAR)
+  - org: A*STAR Advanced Remanufacturing and Technology Centre (ARTC)
     role: Robotics and AI Intern, scene understanding for human–robot collision avoidance
     dates: May 2025 – Aug 2025
     summary: "PointNet segmentation for robot occlusion removal on a UR16e: 98.79% test accuracy, 98% IoU."
+    post: /posts/astar-occlusion-removal/
     points:
       - "Designed and deployed scene-understanding algorithms on ZED 2i point clouds."
       - "Trained a PointNet (PyTorch) segmentation model for robot occlusion removal: **98.79% test accuracy**, 98% IoU on a custom 583-sample dataset."
@@ -41,8 +44,8 @@ leadership:
     dates: Aug 2025 – Present
     points:
       - "Led an 8-member team on autonomous navigation for the [IEEE ICRA BARN Challenge 2026](https://2026.ieee-icra.org/program/competitions/#thebarnchallenge): **1st all-time in dynamic environments**, 6th in static environments, **3rd in the physical final**."
-      - "Leading a **34-member team** building a mobile manipulator home robot for [RoboCup@Home 2027](https://athome.robocup.org/)."
-    post: /posts/team-robo-icra/
+      - "Leading a **34-member team** building a mobile manipulator home robot for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
+    post: /posts/barn-2026/
 
 software:
   - org: Halogen Capital
@@ -56,10 +59,3 @@ software:
     points:
       - "Worked on cloud infrastructure, full-stack features and an LLM/ML project."
 
-activities:
-  - org: Team Archimedes
-    role: Member, autonomous maritime systems (RobotX)
-    post: /posts/team-archimedes/
-  - org: Garage@EEE
-    role: Training and Development Committee
-    post: /posts/garage-eee/

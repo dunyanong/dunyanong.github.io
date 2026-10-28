@@ -1,84 +1,95 @@
 # Projects grouped by theme. `featured: true` puts a project on the home page.
-# Private team repos have no `repo`; they render as "Team repo (private)".
-- theme: Planning & Control
+# Projects without `repo` render as "Code private".
+- theme: Research
   items:
-    - name: Mode-Switching MPC Local Planner
-      summary: "Model predictive control local planner for ROS move_base on the Clearpath Jackal, solved with acados. Core of Team Robo's ICRA BARN 2026 stack."
+    - name: VADER — Decentralized Multi-Robot Navigation
+      summary: "Robots merge their visibility graphs when they meet and jointly schedule who passes first. 87% all-robot success vs. 53% for the best reactive baseline. First-author ICRA 2027 submission."
+      stack: [C++, ROS, CBS, Visibility Graphs]
+      post: /posts/vader/
+      image: /assets/img/projects/vader/warehouse-4-robots.gif
+    - name: VADER on the Robotarium
+      summary: "The same planner running remotely on Georgia Tech's Robotarium with 4–8 real robots. Every robot reached its goal in every trial, with no contacts."
+      stack: [Python, Multi-Robot, Real Robots]
+      post: /posts/vader/#robotarium
+      image: /assets/img/projects/vader/robotarium-8-robots.jpg
+    - name: ST-AVL — Gaze Attention Grounding
+      summary: "Side project: which object is a person looking at, from two cheap cameras and no wearables? A 3D gaze ray built up as evidence in a spatio-temporal voxel grid."
+      stack: [C++, Python, ROS 2, Gaze Estimation]
+      post: /posts/st-avl-gaze-grounding/
+      featured: true
+
+- theme: ICRA BARN Challenge 2026
+  items:
+    - name: NMPC Navigation Stack
+      summary: "Nonlinear MPC in acados that handles static walls and up to ten tracked moving obstacles in one optimisation. 3rd in the physical finals at ICRA 2026, Vienna."
       stack: [C++, acados, ROS, Optimal Control]
       repo: https://github.com/Team-Robo/core-mode_switching_mpc_2026
-      post: /posts/team-robo-icra/
-      image: /assets/img/dy04/barn/team-robo-icra.png
+      post: /posts/barn-2026/
+      image: /assets/img/projects/barn2026/jackal-in-course.jpg
       featured: true
-    - name: FAR Visibility-Graph Global Planner
-      summary: "move_base global planner that wraps costmap obstacles in polygons, links mutually visible corners into a visibility graph and searches it for the shortest route, even in unknown maps."
-      stack: [C++, ROS, Visibility Graphs]
     - name: D* Lite Global Planner
       summary: "Incremental D* Lite global planner plugin for move_base that replans quickly when the map changes."
       stack: [C++, ROS, Incremental Search]
       repo: https://github.com/Team-Robo/nav-D_Lite
-    - name: DDP Local Planner Experiments
-      summary: "Differential dynamic programming experiments for the BARN 2026 Jackal navigation stack."
-      stack: [C++, ROS, Trajectory Optimisation]
+    - name: Visibility-Graph Global Planner
+      summary: "move_base global planner that wraps costmap obstacles in polygons, links mutually visible corners and searches for the shortest route, even in unknown maps."
+      stack: [C++, ROS, Visibility Graphs]
 
-- theme: Perception
+- theme: RoboCup@Home 2027
   items:
-    - name: Free-Seat Detection for HRI
-      summary: "Finds chairs, couches and benches in 3D from the head camera, remembers each seat while people occlude it, and classifies it as free, person, object or unknown. CPU only, for the RoboCup@Home guest-receptionist task."
-      stack: [Python, ROS 2, YOLO, ONNX Runtime, RGB-D]
-      image: /assets/img/projects/seating_detection_pipeline.png
+    - name: Free-Seat Detection
+      summary: "Finds seats in 3D, remembers them while people hide them, and only offers a seat it is sure is free. CPU only, on the robot's Jetson Orin."
+      stack: [Python, ROS 2, YOLO, RGB-D]
+      post: /posts/robocup-home/
+      image: /assets/img/projects/robocup/seat-detection-output.jpg
       featured: true
     - name: 6-DoF Object Pose via MAC Registration
-      summary: "ROS 2 node that finds a known object in a RealSense D455 point cloud with maximal-clique registration (MAC, CVPR'23), publishes its pose, and rejects unreliable estimates with a quality gate."
+      summary: "Registers a known object against the live RealSense cloud with maximal-clique registration (CVPR'23). A quality gate rejects doubtful poses."
       stack: [C++, ROS 2, PCL, Point Cloud Registration]
+      post: /posts/robocup-home/
       image: /assets/img/projects/mac_registration.gif
       featured: true
-    - name: Camera Obstacle Detection
-      summary: "Turns RealSense D455 depth into a filtered obstacle cloud for the Spatio-Temporal Voxel Layer, with Kalman-filter and Hungarian-matching tracking of dynamic obstacles (co-developed)."
-      stack: [C++, ROS 2, PCL, Kalman Filter]
-    - name: LiDAR Obstacle Filter
-      summary: "PCL pipeline for the Galaxea R1's Livox MID-360: crop box, voxel downsampling, radius outlier removal and RANSAC ground removal, feeding STVL."
-      stack: [C++, ROS 2, PCL, Livox]
+    - name: Offline Speech Commands
+      summary: "On-robot Whisper speech recognition with intent parsing. Returns ACCEPT, CONFIRM or REJECT, so a misheard word costs one confirmation, not a repeat."
+      stack: [C++, ROS 2, Whisper]
+      post: /posts/robocup-home/
+      featured: true
+    - name: Self-Built Mobile Manipulator
+      summary: "The team's own robot in design: a mecanum base, a vertical lift and two OpenArm arms, alongside the Galaxea R1 we develop on today."
+      stack: [CAD, Hardware]
+      post: /posts/robocup-home/
+      image: /assets/img/projects/robocup/custom-robot-openarm-cad.jpg
     - name: L2CS Gaze Estimation
       summary: "ROS 2 package for real-time webcam gaze estimation with L2CS-Net (ResNet-50, Gaze360), with RViz gaze-ray visualisation."
       stack: [Python, ROS 2, PyTorch]
       repo: https://github.com/Team-Robo/archived-perc-l2cs_gaze_perception
 
-- theme: Speech & Human–Robot Interaction
+- theme: Industry
   items:
-    - name: Offline Speech Recognition
-      summary: "Fully on-robot speech-to-text: ReSpeaker mic capture, voice-activity detection and Whisper (whisper.cpp), with listening windows opened by the behaviour tree."
-      stack: [C++, ROS 2, Whisper, Audio]
+    - name: Camera Obstacle Detection (Hyundai)
+      summary: "Covers 2D-LiDAR blind spots with a depth camera: nearly 100% detection, zero false positives, over 15 Hz on CPU."
+      stack: [C++, PCL, RGB-D, Nav2]
+      post: /posts/hyundai-camera-obstacle-detection/
       featured: true
-    - name: Priority Text-to-Speech Server
-      summary: "On-robot TTS with Piper voices via sherpa-onnx. Higher-priority utterances pre-empt long replies, which then resume where they left off."
-      stack: [C++, ROS 2, sherpa-onnx]
+    - name: Robot Self-Occlusion Removal (A*STAR)
+      summary: "PointNet segmentation that removes a UR16e arm from its own point cloud for human–robot collision avoidance: 98.79% accuracy, 98% IoU."
+      stack: [PyTorch, PointNet, PCL, ROS]
+      post: /posts/astar-occlusion-removal/
 
-- theme: Robot Systems
+- theme: Earlier Projects
   items:
-    - name: Galaxea R1 Bring-up Tools
-      summary: "One supervised tmux session that starts the R1 driver layer (HDAS, Livox, chassis, RealSense, audio, MoveIt), plus a battery monitor node with low-battery and stale-data warnings."
-      stack: [Shell, Python, ROS 2]
-
-- theme: Personal & Earlier Projects
-  items:
-    - name: Multi-Agent Path Finding with CBS
-      summary: "Conflict-based search for multi-agent path finding, with OpenCV visualisation of conflicts and resolved plans."
-      stack: [Python, OpenCV, Search]
+    - name: Conflict-Based Search in C++
+      summary: "Multi-agent path finding from scratch: Dijkstra, A*, space-time A*, CBS, MovingAI benchmark parsers and OpenCV animation."
+      stack: [C++, OpenCV, Search]
       repo: https://github.com/dunyanong/conflict-based-search
       post: /posts/multi-agent-path-finding/
       image: /assets/img/dy04/mapf_toy.gif
-      featured: true
-    - name: Frontier-Based Autonomous Exploration
-      summary: "Frontier-based exploration with ROS for autonomous mapping of unknown environments."
-      stack: [ROS, SLAM]
+    - name: Frontier-Based Exploration
+      summary: "Exploration of unknown maps in ROS, built without the navigation stack: OctoMap, frontier clustering, A* and fallback behaviours."
+      stack: [C++, ROS, OctoMap]
       repo: https://github.com/dunyanong/exploration-preresearch
       post: /posts/autonomous-exploration/
-    - name: TurtleBot SLAM Navigation
-      summary: "Mobile robot that maps unknown environments with SLAM and plans paths with Dijkstra's algorithm."
-      stack: [ROS, SLAM]
-      post: /posts/mobile-turtle-bot/
-    - name: CNN Image Classification
-      summary: "VGG-style CNN reaching 90% accuracy on CIFAR-10."
-      stack: [Python, PyTorch]
-      repo: https://github.com/dunyanong/cnn-image-classification
-      post: /posts/cnn-image-classification/
+    - name: Wireless Motor Drive (URECA)
+      summary: "A simulated inductive wireless power link driving a PMSM with SPWM control. President's Research Scholar."
+      stack: [Power Electronics, Motor Control]
+      post: /posts/ureca-research/
