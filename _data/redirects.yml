@@ -24,3 +24,16 @@
   to: /writing/
 - from: /blog/
   to: /writing/
+# Category pages retired when categories were unified (Research, Competitions, Industry, Projects)
+- from: /categories/multi-robot/
+  to: /writing/
+- from: /categories/navigation/
+  to: /writing/
+- from: /categories/human-robot-interaction/
+  to: /writing/
+- from: /categories/side-projects/
+  to: /writing/
+- from: /categories/perception/
+  to: /writing/
+- from: /categories/power-electronics/
+  to: /writing/

@@ -2,7 +2,7 @@
 title: "Embodied AI for RoboCup@Home 2027: Perception and Speech for a Home Robot"
 description: "Embodied AI for NTU's RoboCup@Home 2027 robot: free-seat detection, 6-DoF object pose with MAC registration, and offline Whisper speech commands."
 date: 2026-10-26 12:00:00 +0800
-categories: [Competitions, Human-Robot Interaction]
+categories: [Competitions]
 tags: [robocup, perception, speech, ros2, point-cloud]
 image:
   path: /assets/img/projects/robocup/seat-detection-output.jpg
