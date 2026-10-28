@@ -48,6 +48,7 @@ leadership:
     post: /posts/barn-2026/
   - org: Archimedes Autonomous Vehicles (NTU)
     role: Team member, autonomous maritime systems for RobotX 2026
+    dates: Jan 2025 – Oct 2025
     points:
       - "Worked on real-time YOLO object detection for the autonomous surface vessel."
       - "Worked on autonomous navigation software in ROS 2 Jazzy and Gazebo."
