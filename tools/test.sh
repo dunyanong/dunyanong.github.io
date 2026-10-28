@@ -60,10 +60,10 @@ main() {
   JEKYLL_ENV=production bundle exec jekyll b \
     -d "$SITE_DIR$_baseurl" -c "$_config"
 
-  # test
-  bundle exec htmlproofer "$SITE_DIR" \
+  # test (same checks as .github/workflows/pages-deploy.yml; UTF-8 so HTML-Proofer can read the pages)
+  LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/^https:\/\/dunyanong.github.io/,/^https:\/\/fonts.googleapis.com/,/^https:\/\/fonts.gstatic.com/"
 }
 
 while (($#)); do

@@ -1,44 +1,42 @@
-# Chirpy Starter
+# dunyanong.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+Personal site of Dun Yan Ong: research, competitions, industry work and project write-ups.
+Built with Jekyll and the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme, deployed to GitHub Pages
+by `.github/workflows/pages-deploy.yml` on every push to `master`.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## Where things live
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+| Path | What it holds |
+|---|---|
+| `_data/news.yml` | Dated one-liners in the News section of the home page |
+| `_data/experience.yml` | Research, leadership, software and education entries, plus the skills list |
+| `_data/publications.yml` | Papers shown on the home page |
+| `_data/projects.yml` | Project cards, grouped by theme; `featured: true` also puts a card on the home page |
+| `_data/redirects.yml` | Old URLs and where they now point (built by `_plugins/redirect-generator.rb`) |
+| `_posts/` | Project write-ups, one Markdown file per project |
+| `index.html` | Home page layout (renders the data files above) |
+| `_tabs/` | Sidebar pages: Projects, Experience, Writing |
+| `_includes/` | Shared cards: project, experience entry, publication, and extra SEO metadata |
+| `_layouts/home.html` | Replaces Chirpy's post-list home page with the landing page |
+| `assets/img/projects/<topic>/` | Images for each project; `assets/img/og/` holds 1200×630 share images |
+| `assets/files/` | The CV PDF |
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## Run and test locally
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```bash
+bundle install
+bash tools/run.sh      # serve at http://127.0.0.1:4000 with live reload
+bash tools/test.sh     # production build + link check (same check as CI)
 ```
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+## Add a project
 
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+1. Add images under `assets/img/projects/<topic>/`.
+2. Write `_posts/YYYY-MM-DD-<slug>.md` with `title`, `description` (under 160 characters), `date`,
+   `categories` (one of Research, Competitions, Industry, Projects), `tags` and `image`.
+   The page is served at `/posts/<slug>/`.
+3. Add a card to `_data/projects.yml` with `post: /posts/<slug>/`.
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
-# Updated Sun Nov 16 21:08:25 CST 2025
+Site code is MIT-licensed; writing and images are CC BY 4.0. See [LICENSE](LICENSE).
