@@ -5,18 +5,34 @@ date: 2026-10-26 12:00:00 +0800
 categories: [Competitions, Human-Robot Interaction]
 tags: [robocup, perception, speech, ros2, point-cloud]
 image:
-  path: /assets/img/projects/robocup/custom-robot-openarm-cad.jpg
-  alt: CAD views of the team's self-built wheeled humanoid with OpenArm arms
+  path: /assets/img/projects/robocup/seat-detection-output.jpg
+  alt: "Free-seat detection running on the Galaxea R1 head camera"
 ---
 
-[RoboCup@Home](https://athome.robocup.org/) is an embodied AI benchmark. A service robot has to perceive a real home, understand the people in it and act: greet guests, fetch objects, follow people and hold a conversation. I lead NTU's 34-member embodied AI team preparing for **RoboCup@Home 2027**. This page covers the robot and the parts of the software stack I built.
+[RoboCup@Home](https://athome.robocup.org/) is an embodied AI benchmark. A service robot has to perceive a real home, understand the people in it and act: greet guests, fetch objects, follow people and hold a conversation. I lead NTU's 34-member embodied AI team preparing for **RoboCup@Home 2027**. This page covers our two robots and the parts of the software stack I built.
 
-## The robot
+## The robots
 
-We develop on a **Galaxea R1**, a wheeled humanoid: two arms on a lifting torso over a wheeled base, with a Jetson AGX Orin running ROS 2 Humble, a RealSense D455 head camera, a Livox MID-360 LiDAR on the chassis, and a ReSpeaker microphone array. In parallel we're designing our own robot: a mecanum-wheel base, a vertical lift, and two OpenArm arms.
+We work with two different robots.
+
+### Galaxea R1: our current development platform
+
+The **Galaxea R1** is a commercial wheeled humanoid: two arms on a lifting torso over a wheeled base. Ours runs ROS 2 Humble on a Jetson AGX Orin, with a RealSense D455 head camera, a Livox MID-360 LiDAR on the chassis and a ReSpeaker microphone array. Our software stack currently runs on the R1.
+
+### Our self-built robot
+
+Separately from the R1, the team is building its own wheeled humanoid: a mecanum-wheel base, a vertical lift and two OpenArm arms.
+
+> **A huge thank you to Aqid, Jing Yang and the hardware team.** This robot is their work, and their contribution has been amazing. None of this hardware would exist without them.
+{: .prompt-tip }
+
+![Self-built robot, CAD views](/assets/img/projects/robocup/custom-robot-openarm-cad.jpg)
+_The self-built robot with two OpenArm arms, in CAD. Hardware by Aqid, Jing Yang and the hardware team._
 
 ![Early prototype CAD](/assets/img/projects/robocup/custom-robot-early-prototype-cad.jpg)
-_Early CAD prototype of the self-built robot: a mecanum base, a lift column and an arm._
+_An early CAD prototype of the self-built robot: a mecanum base, a lift column and an arm. Hardware by Aqid, Jing Yang and the hardware team._
+
+### Software
 
 The software is split into dozens of ROS 2 repositories (perception, manipulation, navigation, speech, behaviour trees) maintained by sub-teams. Tasks are scripted as behaviour trees that call perception and speech services.
 
@@ -65,6 +81,8 @@ Two confidence scores catch different failures:
 Object and room vocabularies are plain Markdown files loaded at start-up, so they can be swapped for each event without rebuilding.
 
 ## My role
+
+The self-built robot is the work of **Aqid, Jing Yang and the hardware team**. Thank you. My own contributions:
 
 - Lead the 34-member team, coordinating the perception, manipulation, navigation and speech sub-teams.
 - Built the free-seat detector and the MAC pose estimator.

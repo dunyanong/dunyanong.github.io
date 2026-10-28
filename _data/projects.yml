@@ -55,7 +55,7 @@
       post: /posts/robocup-home/
       featured: true
     - name: Self-Built Wheeled Humanoid
-      summary: "The team's own robot in design: a mecanum base, a vertical lift and two OpenArm arms, alongside the Galaxea R1 we develop on today."
+      summary: "Hardware by Aqid, Jing Yang and the hardware team: our own robot, with a mecanum base, a vertical lift and two OpenArm arms, alongside the Galaxea R1 we develop on today."
       stack: [CAD, Hardware]
       post: /posts/robocup-home/
       image: /assets/img/projects/robocup/custom-robot-openarm-cad.jpg
