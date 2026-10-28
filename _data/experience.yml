@@ -1,4 +1,4 @@
-# Research and industry roles, newest first.
+# Experience page and home page data: roles (newest first), education and skills.
 # `summary` is the one-liner shown on the home page; `points` appear on the Experience page.
 research:
   - org: Shanghai Jiao Tong University — Robotics Autonomy and Planning Lab
@@ -59,3 +59,26 @@ software:
     points:
       - "Software engineering, with work on large language model (LLM) and machine learning projects."
 
+
+education:
+  - org: Nanyang Technological University (NTU)
+    role: B.Eng. Electrical and Electronic Engineering · CGPA 4.71/5.00 (expected First Class Honours)
+    dates: Aug 2023 – May 2027
+    points:
+      - "Exchange semester at Shanghai Jiao Tong University, Aug – Dec 2025."
+
+skills:
+  - label: Robotics
+    items: Multi-robot coordination, SLAM, localisation, state estimation, Kalman filtering, sensor fusion, 3D scene understanding, kinematics
+  - label: Planning & Optimisation
+    items: Motion planning, visibility graphs, optimisation theory, optimal control
+  - label: Perception & ML
+    items: RGB-D perception, point cloud processing, semantic segmentation, CNNs, Transformers, PyTorch, OpenCV, digital signal processing
+  - label: Robotics Software
+    items: ROS / ROS 2, move_base, Nav2, MoveIt 2, Gazebo, RViz, acados, Git, Linux
+  - label: Programming
+    items: C++, Python, C
+  - label: Hardware
+    items: NVIDIA Jetson, STM32, ESP32, Arduino, Intel RealSense, ZED, Orbbec, Hokuyo, Livox Mid-360, Velodyne VLP
+  - label: Languages
+    items: English, Mandarin, Cantonese, Malay

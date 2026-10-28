@@ -23,24 +23,13 @@ order: 2
 {% endfor %}
 
 <h2>Education</h2>
-<div class="experience-entry">
-  <div class="experience-head">
-    <span class="experience-org">Nanyang Technological University (NTU)</span>
-    <span class="experience-dates">Aug 2023 – May 2027</span>
-  </div>
-  <div class="experience-role">B.Eng. Electrical and Electronic Engineering · CGPA 4.71/5.00 (expected First Class Honours)</div>
-  <ul>
-    <li>Exchange semester at Shanghai Jiao Tong University, Aug – Dec 2025.</li>
-  </ul>
-</div>
+{% for e in site.data.experience.education %}
+  {% include experience-entry.html entry=e %}
+{% endfor %}
 
 <h2>Skills</h2>
 <dl class="skills">
-  <dt>Robotics</dt><dd>Multi-robot coordination, SLAM, localisation, state estimation, Kalman filtering, sensor fusion, 3D scene understanding, kinematics</dd>
-  <dt>Planning &amp; Optimisation</dt><dd>Motion planning, visibility graphs, optimisation theory, optimal control</dd>
-  <dt>Perception &amp; ML</dt><dd>RGB-D perception, point cloud processing, semantic segmentation, CNNs, Transformers, PyTorch, OpenCV, digital signal processing</dd>
-  <dt>Robotics Software</dt><dd>ROS / ROS 2, move_base, Nav2, MoveIt 2, Gazebo, RViz, acados, Git, Linux</dd>
-  <dt>Programming</dt><dd>C++, Python, C</dd>
-  <dt>Hardware</dt><dd>NVIDIA Jetson, STM32, ESP32, Arduino, Intel RealSense, ZED, Orbbec, Hokuyo, Livox Mid-360, Velodyne VLP</dd>
-  <dt>Languages</dt><dd>English, Mandarin, Cantonese, Malay</dd>
+  {% for s in site.data.experience.skills %}
+    <dt>{{ s.label | escape }}</dt><dd>{{ s.items }}</dd>
+  {% endfor %}
 </dl>
