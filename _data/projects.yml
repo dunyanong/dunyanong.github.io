@@ -16,7 +16,7 @@
     - name: ST-AVL — Gaze Attention Grounding
       icon: fas fa-eye
       metric: "No wearables"
-      summary: "Side project: which object is a person looking at, from two cheap cameras and no wearables? A 3D gaze ray built up as evidence in a spatio-temporal voxel grid."
+      summary: "Toy project with Dr. Shenghai Yuan: which object is a person looking at, from two cheap cameras and no wearables? A Bayesian filter over a 3D voxel grid that answers grounded, uncertain or no attention."
       stack: [C++, Python, ROS 2, Gaze Estimation]
       post: /posts/st-avl-gaze-grounding/
       featured: true

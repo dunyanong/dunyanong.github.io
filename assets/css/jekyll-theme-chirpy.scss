@@ -484,8 +484,19 @@
   background: #000;
 }
 
+/* Landscape clip in a post */
+.post-video {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+  border-radius: 0.5rem;
+  background: #000;
+}
+
 /* Same caption style Chirpy gives images */
-.portrait-video + p > em:only-child {
+.portrait-video + p > em:only-child,
+.post-video + p > em:only-child {
   display: block;
   text-align: center;
   font-style: normal;
