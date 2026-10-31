@@ -1,6 +1,6 @@
 # Experience page and home page data: roles (newest first), education and skills.
 # `summary` is the one-liner shown on the home page; `points` appear on the Experience page.
-# `logo` is a square image (128 px) shown beside the entry.
+# `logo` is a square image (128 px) shown beside the entry; `note` is an optional muted line under the role.
 research:
   - org: Shanghai Jiao Tong University — Robotics Autonomy and Planning Lab
     logo: /assets/img/logos/sjtu.png
@@ -47,6 +47,7 @@ leadership:
   - org: ROBO@EEE (NTU robotics competition team)
     logo: /assets/img/logos/robo-eee.png
     role: Executive Team Lead
+    note: "The team began as the MLDA@EEE Robo Team and is now an independent student team, which streamlines university approvals for external robotics competitions. We continue to value its roots in MLDA@EEE."
     dates: Aug 2025 – Present
     summary: "Lead the ICRA BARN navigation team (**3rd in the physical final**) and a **34-member** RoboCup@Home embodied AI team."
     points:

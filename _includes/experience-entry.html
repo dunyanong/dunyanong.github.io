@@ -16,6 +16,7 @@
       {% if e.points %}
         <details class="disclosure">
           <summary>Details</summary>
+          {% if e.note %}<p class="experience-note">{{ e.note }}</p>{% endif %}
           <ul>
             {% for pt in e.points %}
               <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
@@ -26,7 +27,10 @@
           {% endif %}
         </details>
       {% endif %}
-    {% elsif e.points %}
+    {% else %}
+      {% if e.note %}<p class="experience-note">{{ e.note }}</p>{% endif %}
+    {% endif %}
+    {% if include.compact != true and e.points %}
       <ul>
         {% for pt in e.points %}
           <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
