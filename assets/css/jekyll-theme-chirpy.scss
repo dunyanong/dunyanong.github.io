@@ -283,6 +283,12 @@
 
   .project-media {
     position: relative;
+
+    /* Chirpy wraps page images in a shrink-to-fit zoom link; make it span the card so small images fill it too */
+    > .img-link {
+      display: block;
+      width: 100%;
+    }
   }
 
   .project-img-placeholder {

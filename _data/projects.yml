@@ -14,12 +14,12 @@
       post: /posts/vader/#robotarium
       image: /assets/img/projects/vader/robotarium-8-robots.gif
     - name: ST-AVL — Gaze Attention Grounding
-      icon: fas fa-eye
       metric: "No wearables"
       summary: "Toy project with Dr. Shenghai Yuan: which object is a person looking at, from two cheap cameras and no wearables? A Bayesian filter over a 3D voxel grid that answers grounded, uncertain or no attention."
       stack: [C++, Python, ROS 2, Gaze Estimation]
       post: /posts/st-avl-gaze-grounding/
       featured: true
+      image: /assets/img/projects/st-avl/attention-cone-card.svg
 
 - theme: ICRA BARN Challenge 2026
   items:
@@ -35,9 +35,11 @@
       summary: "Incremental D* Lite global planner plugin for move_base that replans quickly when the map changes."
       stack: [C++, ROS, Incremental Search]
       repo: https://github.com/Team-Robo/nav-D_Lite
+      image: /assets/img/projects/barn2026/dstar-lite.svg
     - name: Visibility-Graph Global Planner
       summary: "move_base global planner that wraps costmap obstacles in polygons, links mutually visible corners and searches for the shortest route, even in unknown maps."
       stack: [C++, ROS, Visibility Graphs]
+      image: /assets/img/projects/barn2026/visibility-graph.svg
 
 - theme: Embodied AI — RoboCup@Home 2027
   items:
@@ -72,6 +74,7 @@
       summary: "ROS 2 package for real-time webcam gaze estimation with L2CS-Net (ResNet-50, Gaze360), with RViz gaze-ray visualisation."
       stack: [Python, ROS 2, PyTorch]
       repo: https://github.com/Team-Robo/archived-perc-l2cs_gaze_perception
+      image: /assets/img/projects/st-avl/l2cs-demo.jpg
 
 - theme: Autonomous Maritime Systems — RobotX 2026
   items:
@@ -85,16 +88,17 @@
 - theme: Industry
   items:
     - name: Camera Obstacle Detection (Hyundai)
-      icon: fas fa-camera
       metric: "~100% detection, 0 FP"
       summary: "Covers 2D-LiDAR blind spots with a depth camera: nearly 100% detection, zero false positives, over 15 Hz on CPU."
       stack: [RGB-D, SLAM, Nav2]
       post: /posts/hyundai-camera-obstacle-detection/
       featured: true
+      image: /assets/img/projects/industry/hmgics-card.jpg
     - name: Robot Self-Occlusion Removal (A*STAR)
       summary: "PointNet segmentation that removes a UR16e arm from its own point cloud for human–robot collision avoidance: 98.79% accuracy, 98% IoU."
       stack: [PyTorch, PointNet, PCL, ROS]
       post: /posts/astar-occlusion-removal/
+      image: /assets/img/projects/industry/astar-card.jpg
 
 - theme: Earlier Projects
   items:
@@ -103,13 +107,16 @@
       stack: [C++, OpenCV, Search]
       repo: https://github.com/dunyanong/conflict-based-search
       post: /posts/multi-agent-path-finding/
-      image: /assets/img/projects/cbs/toy.gif
+      video: /assets/img/projects/cbs/arena-card.mp4
+      poster: /assets/img/projects/cbs/arena-card-poster.jpg
     - name: Frontier-Based Exploration
       summary: "Exploration of unknown maps in ROS, built without the navigation stack: OctoMap, frontier clustering, A* and fallback behaviours."
       stack: [C++, ROS, OctoMap]
       repo: https://github.com/dunyanong/exploration-preresearch
       post: /posts/autonomous-exploration/
+      image: /assets/img/projects/exploration/exploration-rviz.jpg
     - name: Wireless Motor Drive (URECA)
       summary: "A simulated inductive wireless power link driving a PMSM with SPWM control. President's Research Scholar."
       stack: [Power Electronics, Motor Control]
       post: /posts/ureca-research/
+      image: /assets/img/projects/ureca/wireless-motor-drive.svg
