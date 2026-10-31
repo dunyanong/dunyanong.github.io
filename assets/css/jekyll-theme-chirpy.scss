@@ -108,6 +108,27 @@
 .experience-entry {
   margin-bottom: 1.25rem;
 
+  &.has-logo {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+  }
+
+  .experience-logo {
+    flex: 0 0 2.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-top: 0.15rem;
+    border: 1px solid var(--main-border-color);
+    border-radius: 0.5rem;
+    background: #fff center / cover no-repeat;
+  }
+
+  .experience-body {
+    flex: 1;
+    min-width: 0;
+  }
+
   .experience-head {
     display: flex;
     flex-wrap: wrap;

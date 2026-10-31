@@ -1,7 +1,9 @@
 # Experience page and home page data: roles (newest first), education and skills.
 # `summary` is the one-liner shown on the home page; `points` appear on the Experience page.
+# `logo` is a square image (128 px) shown beside the entry.
 research:
   - org: Shanghai Jiao Tong University — Robotics Autonomy and Planning Lab
+    logo: /assets/img/logos/sjtu.png
     role: Undergraduate Researcher, multi-robot systems
     dates: Oct 2025 – Present
     summary: "Built VADER, a decentralized multi-robot navigation framework for unknown environments (first-author ICRA 2027 submission)."
@@ -11,6 +13,7 @@ research:
       - "Developed VADER for multi-robot navigation in unknown environments: robots merge visibility graphs on encounter and jointly schedule routes and passage order via conflict-based search over a space-time visibility graph."
       - "Evaluated in ROS/Gazebo across 4 environments with 2–10 robots: **87% all-robot success vs. 53%** for the strongest reactive baseline; validated on 4–8 Robotarium robots."
   - org: Hyundai Motor Group Innovation Center Singapore
+    logo: /assets/img/logos/hmgics.png
     role: Robotics SLAM Intern, perception and localisation for autonomous mobile robots
     dates: Jan 2026 – May 2026
     summary: "Camera-based obstacle detection covering 2D LiDAR blind spots: near-100% detection, zero false positives, >15 Hz on CPU."
@@ -20,6 +23,7 @@ research:
       - "Achieved **nearly 100% detection success with zero false positives** across floor conditions."
       - "Worked on Cartographer SLAM, AMCL localisation and Nav2 navigation testing; reported trade-off analyses to Korea HQ."
   - org: A*STAR Advanced Remanufacturing and Technology Centre (ARTC)
+    logo: /assets/img/logos/artc.png
     role: Robotics and AI Intern, scene understanding for human–robot collision avoidance
     dates: May 2025 – Aug 2025
     summary: "PointNet segmentation for robot occlusion removal on a UR16e: 98.79% test accuracy, 98% IoU."
@@ -29,6 +33,7 @@ research:
       - "Trained a PointNet (PyTorch) segmentation model for robot occlusion removal: **98.79% test accuracy**, 98% IoU on a custom 583-sample dataset."
       - "Used forward and inverse kinematics to generate UR16e arm meshes and align them with point clouds in PCL."
   - org: Nanyang Technological University — URECA
+    logo: /assets/img/logos/ntu.png
     role: Undergraduate Research Assistant, wireless motor system
     dates: Aug 2024 – May 2025
     summary: "Wireless power transfer motor drive with SPWM control; President's Research Scholar."
@@ -40,6 +45,7 @@ research:
 
 leadership:
   - org: ROBO@EEE (NTU robotics competition team)
+    logo: /assets/img/logos/robo-eee.png
     role: Executive Team Lead
     dates: Aug 2025 – Present
     summary: "Lead the ICRA BARN navigation team (**3rd in the physical final**) and a **34-member** RoboCup@Home embodied AI team."
@@ -48,22 +54,24 @@ leadership:
       - "Leading a **34-member embodied AI team** building a home-service wheeled humanoid for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
     post: /posts/barn-2026/
   - org: Archimedes Autonomous Vehicles (NTU)
+    logo: /assets/img/logos/archimedes.png
     role: Team member, autonomous maritime systems for RobotX 2026
     dates: Jan 2025 – Oct 2025
-    summary: "YOLO perception, ROS 2 navigation and electrical CAD for NTU's autonomous surface vessel."
+    summary: "Electrical CAD design and YOLO perception for NTU's autonomous surface vessel."
     points:
       - "Worked on real-time YOLO object detection for the autonomous surface vessel."
-      - "Worked on autonomous navigation software in ROS 2 Jazzy and Gazebo."
       - "CAD design of electrical components."
       - "Presented the team's ASV and UAV to students at NTU's [Live It Up! STEM showcase](https://www.linkedin.com/posts/litzyuan_asv-uav-stem-ugcPost-7363427166555918336-nj4m/) (Aug 2025)."
 
 software:
   - org: Halogen Capital
+    logo: /assets/img/logos/halogen.png
     role: Software Engineering Intern
     dates: May 2024 – Aug 2024
     points:
       - "Built payment systems with AWS, Go, TypeScript, React and Node.js."
   - org: DoctorOnCall
+    logo: /assets/img/logos/doctoroncall.png
     role: Software Engineering Intern
     dates: Jan 2023 – Jun 2023
     points:
@@ -72,6 +80,7 @@ software:
 
 education:
   - org: Nanyang Technological University (NTU)
+    logo: /assets/img/logos/ntu.png
     role: B.Eng. Electrical and Electronic Engineering · CGPA 4.71/5.00 (expected First Class Honours)
     dates: Aug 2023 – May 2027
     points:

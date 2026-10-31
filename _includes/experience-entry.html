@@ -1,34 +1,40 @@
 <!-- One role. Params: entry (an item from _data/experience.yml), compact (true = one-line summary, points folded into a disclosure) -->
+<!-- The logo is a background image, not an <img>, so Chirpy doesn't wrap it in a zoom link or shimmer box. -->
 {% assign e = include.entry %}
-<div class="experience-entry{% if include.compact %} experience-compact{% endif %}">
-  <div class="experience-head">
-    <span class="experience-org">{{ e.org }}</span>
-    {% if e.dates %}<span class="experience-dates{% if include.compact %} badge-pill{% endif %}">{{ e.dates }}</span>{% endif %}
-  </div>
-  <div class="experience-role">{{ e.role }}</div>
-  {% if include.compact %}
-    {% if e.summary %}<p class="experience-summary">{{ e.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
-    {% if e.points %}
-      <details class="disclosure">
-        <summary>Details</summary>
-        <ul>
-          {% for pt in e.points %}
-            <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-          {% endfor %}
-        </ul>
-        {% if e.post %}
-          <a class="experience-more" href="{{ e.post | relative_url }}">Read more <i class="fas fa-angle-right"></i></a>
-        {% endif %}
-      </details>
+<div class="experience-entry{% if include.compact %} experience-compact{% endif %}{% if e.logo %} has-logo{% endif %}">
+  {% if e.logo %}
+    <span class="experience-logo" role="img" aria-label="{{ e.org | escape }} logo" style="background-image: url('{{ e.logo | relative_url }}')"></span>
+  {% endif %}
+  <div class="experience-body">
+    <div class="experience-head">
+      <span class="experience-org">{{ e.org }}</span>
+      {% if e.dates %}<span class="experience-dates{% if include.compact %} badge-pill{% endif %}">{{ e.dates }}</span>{% endif %}
+    </div>
+    <div class="experience-role">{{ e.role }}</div>
+    {% if include.compact %}
+      {% if e.summary %}<p class="experience-summary">{{ e.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+      {% if e.points %}
+        <details class="disclosure">
+          <summary>Details</summary>
+          <ul>
+            {% for pt in e.points %}
+              <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            {% endfor %}
+          </ul>
+          {% if e.post %}
+            <a class="experience-more" href="{{ e.post | relative_url }}">Read more <i class="fas fa-angle-right"></i></a>
+          {% endif %}
+        </details>
+      {% endif %}
+    {% elsif e.points %}
+      <ul>
+        {% for pt in e.points %}
+          <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {% endfor %}
+      </ul>
     {% endif %}
-  {% elsif e.points %}
-    <ul>
-      {% for pt in e.points %}
-        <li>{{ pt | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  {% if e.post and include.compact != true %}
-    <a class="experience-more" href="{{ e.post | relative_url }}">Read more <i class="fas fa-angle-right"></i></a>
-  {% endif %}
+    {% if e.post and include.compact != true %}
+      <a class="experience-more" href="{{ e.post | relative_url }}">Read more <i class="fas fa-angle-right"></i></a>
+    {% endif %}
+  </div>
 </div>
