@@ -1,0 +1,36 @@
+---
+icon: fas fa-briefcase
+description: "Dun Yan Ong's robotics experience: SJTU RAP Lab, Hyundai and A*STAR internships, NTU EEE, founder of Singapore's first RoboCup@Home team, BARN team lead."
+order: 2
+---
+
+<p class="page-lede">
+  The full CV is also available as a <a href="{{ '/assets/files/ong_dun_yan_cv.pdf' | relative_url }}">PDF</a>.
+</p>
+
+<h2>Research &amp; Industry</h2>
+{% for e in site.data.experience.research %}
+  {% include experience-entry.html entry=e %}
+{% endfor %}
+
+<h2>Competitions &amp; Leadership</h2>
+{% for e in site.data.experience.leadership %}
+  {% include experience-entry.html entry=e %}
+{% endfor %}
+
+<h2>Software Engineering</h2>
+{% for e in site.data.experience.software %}
+  {% include experience-entry.html entry=e %}
+{% endfor %}
+
+<h2>Education</h2>
+{% for e in site.data.experience.education %}
+  {% include experience-entry.html entry=e %}
+{% endfor %}
+
+<h2>Skills</h2>
+<dl class="skills">
+  {% for s in site.data.experience.skills %}
+    <dt>{{ s.label | escape }}</dt><dd>{{ s.items }}</dd>
+  {% endfor %}
+</dl>

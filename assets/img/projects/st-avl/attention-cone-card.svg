@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 24 720 378" width="720" height="378" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14">
+  <title>The ST-AVL observation model: a Gaussian cone around the gaze ray, multiplied by a range band where the ray first meets a surface</title>
+  <defs>
+    <radialGradient id="cone" cx="100" cy="125" r="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0.28"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="460" fill="#ffffff"/>
+
+  <!-- table -->
+  <rect x="40" y="300" width="680" height="16" rx="3" fill="#e5e7eb"/>
+  <text x="700" y="336" text-anchor="end" fill="#6b7280">table</text>
+
+  <!-- objects -->
+  <rect x="428" y="238" width="54" height="62" rx="8" fill="#bfdbfe" stroke="#60a5fa"/>
+  <text x="455" y="275" text-anchor="middle" fill="#1e3a8a" font-style="italic">o₁</text>
+  <rect x="560" y="252" width="86" height="48" rx="6" fill="#fecaca" stroke="#f87171"/>
+  <text x="603" y="281" text-anchor="middle" fill="#7f1d1d" font-style="italic">o₂</text>
+
+  <!-- attention cone (±σ around the gaze ray) -->
+  <polygon points="100,125 498.8,220.0 470.4,300.8" fill="url(#cone)"/>
+  <line x1="100" y1="125" x2="498.8" y2="220.0" stroke="#93c5fd" stroke-dasharray="4 4"/>
+  <line x1="100" y1="125" x2="470.4" y2="300.8" stroke="#93c5fd" stroke-dasharray="4 4"/>
+
+  <!-- range band ρ around r0 -->
+  <path d="M441.8,206.4 A351.4,351.4 0 0 1 417.4,275.7 L457.7,294.8 A396,396 0 0 0 485.2,216.8 Z" fill="#f59e0b" fill-opacity="0.45" stroke="#d97706"/>
+
+  <!-- gaze ray -->
+  <line x1="100" y1="125" x2="452" y2="249" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- an off-axis voxel and its angle θk -->
+  <line x1="100" y1="125" x2="357.5" y2="161.2" stroke="#6b7280" stroke-dasharray="2 4"/>
+  <rect x="351" y="154" width="14" height="14" fill="#a78bfa" stroke="#7c3aed"/>
+  <path d="M189.1,137.5 A90,90 0 0 1 184.9,154.9" fill="none" stroke="#374151" stroke-width="1.5"/>
+  <text x="198" y="152" fill="#374151" font-style="italic">θₖ</text>
+
+  <!-- head -->
+  <circle cx="72" cy="122" r="32" fill="#f3f4f6" stroke="#9ca3af"/>
+  <circle cx="96" cy="118" r="5" fill="#111827"/>
+
+  <!-- labels -->
+  <text x="40" y="186" fill="#374151" font-style="italic">pᵤ (eye)</text>
+  <text x="262" y="214" fill="#1d4ed8" transform="rotate(19.4 262 214)">gaze ray gₜ</text>
+  <text x="372" y="146" fill="#5b21b6">voxel vₖ</text>
+  <text x="520" y="196" fill="#2563eb">cone width σₜ</text>
+  <text x="520" y="214" fill="#2563eb" font-size="12.5">(per-frame gaze uncertainty)</text>
+  <text x="500" y="150" fill="#b45309">range band ρₖ around r₀</text>
+  <text x="500" y="168" fill="#b45309" font-size="12.5">(where the ray first meets a surface)</text>
+  <line x1="498" y1="172" x2="474" y2="226" stroke="#d97706"/>
+</svg>

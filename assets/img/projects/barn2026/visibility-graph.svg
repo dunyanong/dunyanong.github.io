@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<title>Visibility graph: obstacle corners joined by lines of sight, searched for the shortest route</title>
+<rect width="800" height="420" fill="#ffffff"/>
+<text x="40" y="44" font-size="22" font-weight="600" fill="#111827">Visibility graph: corners joined by lines of sight</text>
+<polygon points="230,170 330,140 360,260 250,300" fill="#fde68a" fill-opacity="0.55" stroke="#f59e0b" stroke-width="14" stroke-opacity="0.35" stroke-linejoin="round"/>
+<polygon points="230,170 330,140 360,260 250,300" fill="#4b5563"/>
+<polygon points="450,230 560,200 610,290 540,360 460,330" fill="#fde68a" fill-opacity="0.55" stroke="#f59e0b" stroke-width="14" stroke-opacity="0.35" stroke-linejoin="round"/>
+<polygon points="450,230 560,200 610,290 540,360 460,330" fill="#4b5563"/>
+<line x1="80" y1="300" x2="230" y2="170" stroke="#94a3b8" stroke-width="2"/>
+<line x1="80" y1="300" x2="250" y2="300" stroke="#94a3b8" stroke-width="2"/>
+<line x1="80" y1="300" x2="460" y2="330" stroke="#94a3b8" stroke-width="2"/>
+<line x1="330" y1="140" x2="720" y2="140" stroke="#94a3b8" stroke-width="2"/>
+<line x1="330" y1="140" x2="560" y2="200" stroke="#94a3b8" stroke-width="2"/>
+<line x1="560" y1="200" x2="720" y2="140" stroke="#94a3b8" stroke-width="2"/>
+<line x1="360" y1="260" x2="450" y2="230" stroke="#94a3b8" stroke-width="2"/>
+<line x1="250" y1="300" x2="460" y2="330" stroke="#94a3b8" stroke-width="2"/>
+<line x1="610" y1="290" x2="720" y2="140" stroke="#94a3b8" stroke-width="2"/>
+<line x1="360" y1="260" x2="460" y2="330" stroke="#94a3b8" stroke-width="2"/>
+<line x1="330" y1="140" x2="450" y2="230" stroke="#94a3b8" stroke-width="2"/>
+<line x1="230" y1="170" x2="330" y2="140" stroke="#94a3b8" stroke-width="2"/>
+<line x1="330" y1="140" x2="360" y2="260" stroke="#94a3b8" stroke-width="2"/>
+<line x1="360" y1="260" x2="250" y2="300" stroke="#94a3b8" stroke-width="2"/>
+<line x1="250" y1="300" x2="230" y2="170" stroke="#94a3b8" stroke-width="2"/>
+<line x1="450" y1="230" x2="560" y2="200" stroke="#94a3b8" stroke-width="2"/>
+<line x1="560" y1="200" x2="610" y2="290" stroke="#94a3b8" stroke-width="2"/>
+<line x1="610" y1="290" x2="540" y2="360" stroke="#94a3b8" stroke-width="2"/>
+<line x1="540" y1="360" x2="460" y2="330" stroke="#94a3b8" stroke-width="2"/>
+<line x1="460" y1="330" x2="450" y2="230" stroke="#94a3b8" stroke-width="2"/>
+<polyline points="80,300 230,170 330,140 720,140" fill="none" stroke="#2563eb" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="230" cy="170" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="330" cy="140" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="360" cy="260" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="250" cy="300" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="450" cy="230" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="560" cy="200" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="610" cy="290" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="540" cy="360" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="460" cy="330" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+<circle cx="80" cy="300" r="14" fill="#16a34a"/><text x="80" y="306" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">S</text>
+<circle cx="720" cy="140" r="14" fill="#7c3aed"/><text x="720" y="146" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">G</text>
+<g font-size="16" fill="#374151"><line x1="430" y1="392" x2="460" y2="392" stroke="#94a3b8" stroke-width="2"/><text x="468" y="397">line of sight</text><line x1="590" y1="392" x2="620" y2="392" stroke="#2563eb" stroke-width="6"/><text x="628" y="397">shortest route</text></g>
+</svg>

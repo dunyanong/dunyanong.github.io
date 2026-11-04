@@ -1,0 +1,39 @@
+# Old URLs that no longer exist, and where they now point.
+# _plugins/redirect-generator.rb turns each entry into a small redirect page.
+- from: /posts/rap-lab-research/
+  to: /posts/vader/
+- from: /posts/team-robo-icra/
+  to: /posts/barn-2026/
+- from: /posts/sjtu-exchange/
+  to: /experience/
+- from: /posts/team-archimedes/
+  to: /projects/
+- from: /posts/garage-eee/
+  to: /projects/
+- from: /posts/hackathons/
+  to: /projects/
+- from: /posts/fvg-football/
+  to: /projects/
+- from: /posts/cnn-image-classification/
+  to: /projects/
+- from: /posts/mobile-turtle-bot/
+  to: /projects/
+- from: /about/
+  to: /
+- from: /archives/
+  to: /writing/
+- from: /blog/
+  to: /writing/
+# Category pages retired when categories were unified (Research, Competitions, Industry, Projects)
+- from: /categories/multi-robot/
+  to: /writing/
+- from: /categories/navigation/
+  to: /writing/
+- from: /categories/human-robot-interaction/
+  to: /writing/
+- from: /categories/side-projects/
+  to: /writing/
+- from: /categories/perception/
+  to: /writing/
+- from: /categories/power-electronics/
+  to: /writing/

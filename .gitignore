@@ -1,0 +1,30 @@
+# Bundler cache
+.bundle
+vendor
+Gemfile.lock
+
+# Jekyll cache
+.jekyll-cache
+.jekyll-metadata
+_site
+
+# RubyGems
+*.gem
+
+# NPM dependencies
+node_modules
+package-lock.json
+
+# IDE configurations
+.idea
+.vscode
+
+# Misc
+_sass/vendors
+assets/js/dist/*
+!assets/js/dist/sw.min.js
+*.mp4
+!assets/img/projects/**/*.mp4
+
+# Original photos and videos kept locally; compressed copies live in assets/
+_raw/

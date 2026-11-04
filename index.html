@@ -1,0 +1,72 @@
+---
+layout: home
+seo_title: "Dun Yan Ong (Ong Dun Yan) — Robotics Researcher, NTU Singapore"
+---
+
+<section class="hero">
+  <h1>Dun Yan Ong <span class="hero-alt-name">(Ong Dun Yan)</span></h1>
+  <p class="hero-lede">
+    Final-year Electrical &amp; Electronic Engineering student at NTU Singapore, working on
+    <strong>multi-robot systems</strong>, <strong>scene understanding</strong> and <strong>robot perception</strong>.
+  </p>
+  <div class="hero-links">
+    <a class="btn btn-primary" href="{{ '/assets/files/ong_dun_yan_cv.pdf' | relative_url }}"><i class="far fa-file-pdf"></i> CV</a>
+    <a class="btn btn-outline-secondary" href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i> Email</a>
+    <a class="btn btn-outline-secondary" href="https://github.com/{{ site.github.username }}"><i class="fab fa-github"></i> GitHub</a>
+    <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/dunyan/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a class="btn btn-outline-secondary" href="https://scholar.google.com/citations?user=GgQpu5EAAAAJ"><i class="fab fa-google-scholar"></i> Google Scholar</a>
+  </div>
+</section>
+
+<section>
+  <h2>News</h2>
+  <ol class="timeline">
+    {% for n in site.data.news limit: 4 %}
+      <li><span class="timeline-date">{{ n.date }}</span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+    {% endfor %}
+  </ol>
+  {% if site.data.news.size > 4 %}
+    <details class="disclosure">
+      <summary>Older news</summary>
+      <ol class="timeline">
+        {% for n in site.data.news offset: 4 %}
+          <li><span class="timeline-date">{{ n.date }}</span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {% endfor %}
+      </ol>
+    </details>
+  {% endif %}
+</section>
+
+<section>
+  <h2>Publications</h2>
+  {% for pub in site.data.publications %}
+    {% include publication.html pub=pub %}
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Selected Projects</h2>
+  <div class="project-grid">
+    {% for group in site.data.projects %}
+      {% for p in group.items %}
+        {% if p.featured %}
+          {% include project-card.html project=p placeholder=true %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+  <a class="section-more" href="{{ '/projects/' | relative_url }}">All projects <i class="fas fa-angle-right"></i></a>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="experience-list">
+    {% for e in site.data.experience.research limit: 3 %}
+      {% include experience-entry.html entry=e compact=true %}
+    {% endfor %}
+    {% for e in site.data.experience.leadership %}
+      {% include experience-entry.html entry=e compact=true %}
+    {% endfor %}
+  </div>
+  <a class="section-more" href="{{ '/experience/' | relative_url }}">Full experience, education and skills <i class="fas fa-angle-right"></i></a>
+</section>

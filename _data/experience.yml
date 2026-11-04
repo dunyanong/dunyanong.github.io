@@ -1,0 +1,108 @@
+# Experience page and home page data: roles (newest first), education and skills.
+# `summary` is the one-liner shown on the home page; `points` appear on the Experience page.
+# `logo` is a square image (128 px) shown beside the entry; `note` is an optional muted line under the role.
+research:
+  - org: Shanghai Jiao Tong University
+    url: https://www.sjtu.edu.cn/
+    logo: /assets/img/logos/sjtu.png
+    role: "Undergraduate Researcher, [Robotics Autonomy and Planning Lab](https://rap-lab.github.io/) · multi-robot systems"
+    dates: Oct 2025 – Present
+    summary: "Built VADER, a decentralized multi-robot navigation framework for unknown environments (first-author paper, under review)."
+    post: /posts/vader/
+    points:
+      - "Supervised by [Prof. Zhongqiang (Richard) Ren](https://wonderren.github.io/), co-supervised by [Dr. Shenghai Yuan](https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en)."
+      - "Developed VADER for multi-robot navigation in unknown environments: robots merge visibility graphs on encounter and jointly schedule routes and passage order via conflict-based search over a space-time visibility graph."
+      - "Evaluated in ROS/Gazebo across 4 environments with 2–10 robots: **87% all-robot success vs. 53%** for the strongest reactive baseline; validated on 4–8 Robotarium robots."
+  - org: Hyundai Motor Group Innovation Center Singapore
+    logo: /assets/img/logos/hmgics.png
+    role: Robotics SLAM Intern, perception and localisation for autonomous mobile robots
+    dates: Jan 2026 – May 2026
+    summary: "Camera-based obstacle detection covering 2D LiDAR blind spots: near-100% detection, zero false positives, >15 Hz on CPU."
+    post: /posts/hyundai-camera-obstacle-detection/
+    points:
+      - "Researched real-time camera-based obstacle detection with Orbbec Gemini 2 and Femto Bolt to cover 2D LiDAR blind spots (>15 Hz, CPU only)."
+      - "Achieved **nearly 100% detection success with zero false positives** across floor conditions."
+      - "Worked on Cartographer SLAM, AMCL localisation and Nav2 navigation testing; reported trade-off analyses to Korea HQ."
+  - org: Agency for Science, Technology and Research (A*STAR)
+    url: https://www.a-star.edu.sg/
+    logo: /assets/img/logos/artc.png
+    role: "Robotics and AI Intern, [Advanced Remanufacturing and Technology Centre (ARTC)](https://www.a-star.edu.sg/artc)"
+    dates: May 2025 – Aug 2025
+    summary: "Scene understanding for human–robot collision avoidance: PointNet segmentation for robot occlusion removal on a UR16e, 98.79% test accuracy, 98% IoU."
+    post: /posts/astar-occlusion-removal/
+    points:
+      - "Designed and deployed scene-understanding algorithms on ZED 2i point clouds."
+      - "Trained a PointNet (PyTorch) segmentation model for robot occlusion removal: **98.79% test accuracy**, 98% IoU on a custom 583-sample dataset."
+      - "Used forward and inverse kinematics to generate UR16e arm meshes and align them with point clouds in PCL."
+  - org: Nanyang Technological University — URECA
+    logo: /assets/img/logos/ntu.png
+    role: Undergraduate Research Assistant, wireless motor system
+    dates: Aug 2024 – May 2025
+    summary: "Wireless power transfer motor drive with SPWM control; President's Research Scholar."
+    post: /posts/ureca-research/
+    points:
+      - "Supervised by Prof. Christopher H. T. Lee."
+      - "Developed a wireless motor system using wireless power transfer, with SPWM control of speed and torque."
+      - "Awarded **President's Research Scholar**."
+
+leadership:
+  - org: ROBO@EEE (NTU robotics competition team)
+    logo: /assets/img/logos/robo-eee.png
+    role: Executive Team Lead
+    note: "The team began as the MLDA@EEE Robo Team and is now an independent student team, which streamlines university approvals for external robotics competitions. We continue to value its roots in MLDA@EEE."
+    dates: Aug 2025 – Present
+    summary: "Led the ICRA BARN navigation team (**3rd in the physical final**). Separately, founded **Singapore's first RoboCup@Home team** (34 members)."
+    points:
+      - "Led an 8-member team on autonomous navigation for the [IEEE ICRA BARN Challenge 2026](https://2026.ieee-icra.org/program/competitions/#thebarnchallenge): **1st all-time in dynamic environments**, 6th in static environments, **3rd in the physical final**."
+      - "Founded and lead a **34-member embodied AI team**, **Singapore's first RoboCup@Home team**, building a home-service wheeled humanoid for [RoboCup@Home 2027](https://athome.robocup.org/) ([write-up](/posts/robocup-home/))."
+    post: /posts/barn-2026/
+  - org: Team Archimedes (NTU robotics competition team)
+    logo: /assets/img/logos/archimedes.png
+    role: Team member, autonomous maritime systems for RobotX 2026
+    dates: Jan 2025 – Oct 2025
+    summary: "Electrical CAD design and YOLO perception for NTU's autonomous surface vessel."
+    points:
+      - "Worked on real-time YOLO object detection for the autonomous surface vessel."
+      - "CAD design of electrical components."
+      - "Presented the team's ASV and UAV to students at NTU's [Live It Up! STEM showcase](https://www.linkedin.com/posts/litzyuan_asv-uav-stem-ugcPost-7363427166555918336-nj4m/) (Aug 2025)."
+
+software:
+  - org: Halogen Capital
+    logo: /assets/img/logos/halogen.png
+    role: Software Engineering Intern
+    dates: May 2024 – Aug 2024
+    points:
+      - "Built payment systems with AWS, Go, TypeScript, React and Node.js."
+  - org: DoctorOnCall
+    logo: /assets/img/logos/doctoroncall.png
+    role: Software Engineering Intern
+    dates: Jan 2023 – Jun 2023
+    points:
+      - "Software engineering, with work on large language model (LLM) and machine learning projects."
+
+
+education:
+  - org: Nanyang Technological University (NTU)
+    logo: /assets/img/logos/ntu.png
+    role: B.Eng. Electrical and Electronic Engineering · CGPA 4.71/5.00 (expected First Class Honours)
+    dates: Aug 2023 – May 2027
+  - org: Shanghai Jiao Tong University (SJTU) — Global College
+    logo: /assets/img/logos/sjtu-gc.png
+    role: Exchange semester · Electrical and Computer Engineering (ECE)
+    dates: Sep 2025 – Dec 2025
+
+skills:
+  - label: Robotics
+    items: Multi-robot coordination, SLAM, localisation, state estimation, Kalman filtering, sensor fusion, 3D scene understanding, kinematics
+  - label: Planning & Optimisation
+    items: Motion planning, visibility graphs, optimisation theory, optimal control
+  - label: Perception & ML
+    items: RGB-D perception, point cloud processing, semantic segmentation, CNNs, Transformers, PyTorch, OpenCV, digital signal processing
+  - label: Robotics Software
+    items: ROS / ROS 2, move_base, Nav2, MoveIt 2, Gazebo, RViz, acados, Git, Linux
+  - label: Programming
+    items: C++, Python, C
+  - label: Hardware
+    items: NVIDIA Jetson, STM32, ESP32, Arduino, Intel RealSense, ZED, Orbbec, Hokuyo, Livox Mid-360, Velodyne VLP
+  - label: Languages
+    items: English, Mandarin, Cantonese, Malay

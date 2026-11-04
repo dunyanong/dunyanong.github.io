@@ -1,0 +1,834 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+#avatar img {
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Six contact icons: tighten Chirpy's gaps so they stay on one row */
+#sidebar .sidebar-bottom a:not(:last-child) {
+  margin-right: 0.45rem;
+}
+
+/* ---------- typography: Geist Sans and Geist Mono everywhere (after vercel.com) ---------- */
+
+$font-sans: Geist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+:root {
+  --bs-font-monospace: #{$font-mono};
+}
+
+body {
+  font-family: $font-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chirpy hard-codes Lato / Oswald / plain sans-serif in these places */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header .post-desc,
+#toc-bar .label,
+#search-results a,
+kbd,
+#notification .toast-body,
+#toc-popup .header .label,
+#toc-popup #toc-popup-content,
+#toc-solo-trigger .label,
+#topbar-title,
+.pagination,
+.post-navigation .label,
+.tag span,
+#archives .date.day {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  letter-spacing: -0.03em;
+}
+
+#sidebar .site-title {
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+/* Small metadata in Geist Mono, the way Vercel sets labels and dates */
+.timeline .timeline-date,
+.experience-entry .experience-dates,
+.project-card .project-tag {
+  font-family: $font-mono;
+}
+
+.experience-entry .experience-dates {
+  font-size: 0.8125rem;
+  line-height: 1.9;
+}
+
+/* ---------- landing page and portfolio tabs ---------- */
+
+.landing section,
+#core-wrapper .content {
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--main-border-color);
+    font-size: 1.35rem;
+  }
+}
+
+.landing section:first-child h2 {
+  margin-top: 0;
+}
+
+.hero {
+  padding-top: 1.5rem;
+
+  h1 {
+    font-size: 2.4rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-lede {
+    font-size: 1.08rem;
+    max-width: 46rem;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .btn {
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* Secondary actions: page-coloured with a hairline border */
+    .btn-outline-secondary {
+      color: var(--heading-color);
+      background: var(--main-bg);
+      border-color: var(--main-border-color);
+
+      &:hover {
+        color: var(--heading-color);
+        background: var(--card-hover-bg);
+        border-color: var(--hover-border-color);
+      }
+    }
+  }
+}
+
+.page-lede {
+  color: var(--text-muted-color);
+}
+
+.section-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Vertical timeline: a rule on the left with a dot per item */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--main-border-color);
+
+  li {
+    position: relative;
+    padding-bottom: 0.9rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(-1.25rem - 6px);
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px var(--main-bg);
+    }
+  }
+
+  .timeline-date {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--text-muted-color);
+  }
+}
+
+.experience-entry {
+  margin-bottom: 1.25rem;
+
+  &.has-logo {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+  }
+
+  .experience-logo {
+    flex: 0 0 2.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-top: 0.15rem;
+    border: 1px solid var(--main-border-color);
+    border-radius: 0.5rem;
+    background: #fff center / cover no-repeat;
+  }
+
+  .experience-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Name wraps on the left; dates always sit top-right (stacked under the name on phones) */
+  .experience-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: 1rem;
+
+    @media (max-width: 575.98px) {
+      grid-template-columns: minmax(0, 1fr);
+      justify-items: start;
+    }
+  }
+
+  .experience-dates {
+    white-space: nowrap;
+  }
+
+  .experience-org {
+    font-weight: 600;
+    color: var(--heading-color);
+
+    a { color: inherit; }
+  }
+
+  .experience-dates,
+  .experience-role {
+    color: var(--text-muted-color);
+  }
+
+  .experience-role {
+    font-style: italic;
+  }
+
+  .experience-note {
+    margin: 0.35rem 0 0;
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+  }
+
+  .experience-summary,
+  ul {
+    margin: 0.35rem 0 0;
+  }
+
+  .experience-more {
+    font-size: 0.9rem;
+  }
+}
+
+/* Home page: compact roles as one bordered list */
+.experience-list {
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+
+  .experience-compact {
+    margin: 0;
+    padding: 0.9rem 1rem;
+
+    & + .experience-compact {
+      border-top: 1px solid var(--main-border-color);
+    }
+  }
+
+  .experience-head {
+    align-items: baseline;
+    row-gap: 0.25rem;
+  }
+
+  .experience-role {
+    font-size: 0.92rem;
+  }
+
+  .experience-summary {
+    font-size: 0.95rem;
+  }
+}
+
+.publication {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+
+  &.has-image {
+    display: grid;
+    grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  img,
+  video {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .badge-row {
+    margin-bottom: 0.4rem;
+  }
+
+  .publication-title {
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--heading-color);
+  }
+
+  .publication-authors {
+    margin-top: 0.3rem;
+    font-size: 0.92rem;
+  }
+
+  .publication-venue {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-muted-color);
+  }
+
+  .publication-summary {
+    margin: 0.4rem 0 0;
+    font-size: 0.95rem;
+  }
+
+  .publication-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 576px) {
+    &.has-image {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card {
+  color: var(--text-color); /* Bootstrap's .card text colour is fixed dark, unreadable in dark mode */
+  background: var(--card-bg);
+  border-color: var(--main-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--hover-border-color);
+    background: var(--card-hover-bg);
+  }
+
+  .project-img {
+    display: block;
+    width: 100%;
+    color: transparent; /* no alt text flashing under the badge while loading */
+    aspect-ratio: 40 / 21;
+    object-fit: cover;
+    background: var(--img-bg);
+  }
+
+  .project-media {
+    position: relative;
+
+    /* Chirpy wraps page images in a shrink-to-fit zoom link; make it span the card so small images fill it too */
+    > .img-link {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .project-img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-muted-color);
+    background: linear-gradient(135deg, var(--card-hover-bg), var(--card-bg));
+  }
+
+  .project-metric {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+  }
+
+  .project-metric-inline {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    color: var(--main-bg);
+    background: var(--heading-color);
+    backdrop-filter: none;
+  }
+
+  .card-body {
+    height: 100%;
+  }
+
+  .card-title {
+    color: var(--heading-color);
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .card-text {
+    font-size: 0.93rem;
+  }
+
+  .landing & .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: auto;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-tag {
+    padding: 0.1rem 0.45rem;
+    border: 1px solid var(--main-border-color);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--text-muted-color);
+    background: var(--inline-code-bg);
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 1.25rem;
+  row-gap: 0.4rem;
+
+  dt {
+    color: var(--heading-color);
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+
+    dd {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* Chirpy wraps home-page images in a fixed-ratio .preview-img box; let our images size themselves */
+.landing .preview-img {
+  aspect-ratio: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+/* Keep blog widgets (recent posts, trending tags) off the landing page */
+#main-wrapper:has(.landing) #panel-wrapper .access {
+  display: none;
+}
+
+.hero .hero-alt-name {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-muted-color);
+}
+
+/* ---------- small components: badges, stat cards, disclosures ---------- */
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-style: normal;
+  white-space: nowrap;
+  color: var(--text-muted-color);
+  background: var(--inline-code-bg);
+
+  &.badge-accent {
+    font-weight: 600;
+    color: var(--main-bg);
+    background: var(--heading-color);
+  }
+}
+
+/* Native <details> styled as a small accordion */
+.disclosure {
+  margin-top: 0.4rem;
+
+  > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-muted-color);
+    cursor: pointer;
+    list-style: none;
+
+    &:hover {
+      color: var(--heading-color);
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      width: 0.4rem;
+      height: 0.4rem;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &[open] > summary::before {
+    transform: rotate(45deg);
+  }
+
+  > ul,
+  > ol,
+  > p {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Portrait clip in a post: centred and height-capped instead of full-width */
+.portrait-video {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  margin: 0 auto 0.5rem;
+  border-radius: 0.5rem;
+  background: #000;
+}
+
+/* Landscape clip in a post */
+.post-video {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+  border-radius: 0.5rem;
+  background: #000;
+}
+
+/* Same caption style Chirpy gives images */
+.portrait-video + p > em:only-child,
+.video-pair + p > em:only-child,
+.post-video + p > em:only-child {
+  display: block;
+  text-align: center;
+  font-style: normal;
+  font-size: 80%;
+  padding: 0;
+  color: var(--text-muted-color);
+}
+
+/* Two portrait videos side by side */
+.video-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 560px;
+  margin: 0 auto 0.5rem;
+
+  .portrait-video {
+    width: 100%;
+    max-height: none;
+    margin: 0;
+  }
+}
+
+/* ---------- colour theme: Geist black, white and grays (after vercel.com) ---------- */
+
+@mixin geist-light {
+  --accent: #171717;
+  --accent-strong: #171717;
+  --btn-primary-text: #ffffff;
+
+  --main-bg: #ffffff;
+  --main-border-color: #ebebeb;
+  --text-color: #171717;
+  --text-muted-color: #666666;
+  --heading-color: #171717;
+  --label-color: #666666;
+  --link-color: #171717;
+  --link-underline-color: rgb(0 0 0 / 25%);
+
+  --sidebar-bg: #fafafa;
+  --sidebar-border-color: #ebebeb;
+  --sidebar-muted-color: #666666;
+  --sidebar-active-color: #171717;
+  --sidebar-hover-bg: #ebebeb;
+  --sidebar-btn-bg: #f2f2f2;
+  --sidebar-btn-color: #666666;
+  --site-title-color: #171717;
+  --site-subtitle-color: #666666;
+  --topbar-bg: rgb(255 255 255 / 85%);
+  --topbar-text-color: #171717;
+  --search-border-color: #ebebeb;
+  --search-icon-color: #8f8f8f;
+
+  --card-bg: #ffffff;
+  --card-hover-bg: #fafafa;
+  --card-border-color: #ebebeb;
+  --inline-code-bg: rgb(0 0 0 / 5%);
+  --toc-highlight: #171717;
+  --checkbox-checked-color: #171717;
+  --btn-share-hover-color: #171717;
+  --footnote-target-bg: rgb(0 0 0 / 6%);
+  --prompt-info-bg: rgb(0 0 0 / 4%);
+  --prompt-info-icon-color: #171717;
+  --tag-hover: rgb(0 0 0 / 6%);
+  --tag-border: #ebebeb;
+  --card-shadow: none;
+  --btn-border-color: #ebebeb;
+  --tb-odd-bg: #fafafa;
+  --selection-bg: rgb(0 0 0 / 14%);
+  --hover-border-color: #c9c9c9;
+  --btn-primary-hover: #383838;
+}
+
+@mixin geist-dark {
+  --accent: #ededed;
+  --accent-strong: #ededed;
+  --btn-primary-text: #000000;
+
+  --main-bg: #000000;
+  --main-border-color: #242424;
+  --text-color: #ededed;
+  --text-muted-color: #a1a1a1;
+  --heading-color: #ededed;
+  --label-color: #a1a1a1;
+  --link-color: #ededed;
+  --link-underline-color: rgb(255 255 255 / 35%);
+
+  --sidebar-bg: #0a0a0a;
+  --sidebar-border-color: #1f1f1f;
+  --sidebar-muted-color: #a1a1a1;
+  --sidebar-active-color: #ededed;
+  --sidebar-hover-bg: #1f1f1f;
+  --sidebar-btn-bg: #1a1a1a;
+  --sidebar-btn-color: #a1a1a1;
+  --site-title-color: #ededed;
+  --site-subtitle-color: #a1a1a1;
+  --topbar-bg: rgb(0 0 0 / 85%);
+  --topbar-text-color: #ededed;
+  --search-border-color: #242424;
+  --search-icon-color: #8f8f8f;
+
+  --card-bg: #0a0a0a;
+  --card-hover-bg: #111111;
+  --card-border-color: #242424;
+  --inline-code-bg: rgb(255 255 255 / 8%);
+  --toc-highlight: #ededed;
+  --checkbox-checked-color: #ededed;
+  --btn-share-hover-color: #ededed;
+  --footnote-target-bg: rgb(255 255 255 / 10%);
+  --prompt-info-bg: rgb(255 255 255 / 6%);
+  --prompt-info-icon-color: #ededed;
+  --tag-hover: rgb(255 255 255 / 10%);
+  --tag-border: #242424;
+  --card-shadow: none;
+  --button-bg: #0a0a0a;
+  --btn-border-color: #242424;
+  --tb-odd-bg: #0a0a0a;
+  --tb-even-bg: #111111;
+  --selection-bg: rgb(255 255 255 / 25%);
+  --hover-border-color: #3d3d3d;
+  --btn-primary-hover: #cccccc;
+}
+
+/* Same light/dark switching as Chirpy's base styles, so the overrides follow the theme toggle */
+html {
+  @media (prefers-color-scheme: light) {
+    &:not([data-mode]),
+    &[data-mode='light'] {
+      @include geist-light;
+    }
+
+    &[data-mode='dark'] {
+      @include geist-dark;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not([data-mode]),
+    &[data-mode='dark'] {
+      @include geist-dark;
+    }
+
+    &[data-mode='light'] {
+      @include geist-light;
+    }
+  }
+}
+
+/* Primary actions: solid black (white in dark mode), lightening on hover */
+.btn-primary {
+  --bs-btn-bg: var(--accent-strong);
+  --bs-btn-border-color: var(--accent-strong);
+  --bs-btn-hover-bg: var(--btn-primary-hover);
+  --bs-btn-hover-border-color: var(--btn-primary-hover);
+  --bs-btn-active-bg: var(--btn-primary-hover);
+  --bs-btn-active-border-color: var(--btn-primary-hover);
+  --bs-btn-color: var(--btn-primary-text);
+  --bs-btn-hover-color: var(--btn-primary-text);
+  --bs-btn-active-color: var(--btn-primary-text);
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--selection-bg);
+}
+
+/* Topbar menu and search buttons otherwise pick up Bootstrap's blue link colour */
+#sidebar-trigger,
+#search-trigger {
+  color: var(--topbar-text-color);
+}
+
+/* Mermaid draws with its own (lavender) palette and id-scoped styles; repaint diagrams in the site's grays */
+.mermaid svg {
+  &,
+  * {
+    font-family: $font-sans !important;
+  }
+
+  .node rect,
+  .node polygon,
+  .node circle,
+  .node ellipse,
+  .node path,
+  .cluster rect {
+    fill: var(--card-bg) !important;
+    stroke: var(--text-muted-color) !important;
+  }
+
+  .nodeLabel,
+  .edgeLabel,
+  .cluster-label,
+  text {
+    color: var(--text-color) !important;
+    fill: var(--text-color) !important;
+  }
+
+  .edgeLabel,
+  .edgeLabel p,
+  .labelBkg {
+    background-color: var(--main-bg) !important;
+  }
+
+  .edgeLabel rect {
+    fill: var(--main-bg) !important;
+  }
+
+  .flowchart-link,
+  .edgePath .path {
+    stroke: var(--text-muted-color) !important;
+  }
+
+  marker path {
+    fill: var(--text-muted-color) !important;
+    stroke: var(--text-muted-color) !important;
+  }
+}
+
+/* Let long table cells wrap instead of forcing a sideways scroll */
+.table-wrapper > table thead th,
+.table-wrapper > table tbody tr td {
+  white-space: normal;
+}

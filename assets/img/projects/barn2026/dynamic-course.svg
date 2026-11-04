@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<title>A Jackal in a DynaBARN-style course: moving obstacles are tracked, their future positions predicted, and the planned path bends around them</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="arrc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0891b2"/></marker></defs>
+<rect width="800" height="420" fill="#ffffff"/>
+<text x="40" y="40" font-size="21" font-weight="600" fill="#111827">Dodging obstacles that move</text>
+<rect x="40" y="66" width="70" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="116" y="66" width="87" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="209" y="66" width="74" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="289" y="66" width="91" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="386" y="66" width="78" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="470" y="66" width="95" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="571" y="66" width="82" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="659" y="66" width="99" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="40" y="352" width="81" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="127" y="352" width="98" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="231" y="352" width="85" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="322" y="352" width="72" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="400" y="352" width="89" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="495" y="352" width="76" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="577" y="352" width="93" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<rect x="676" y="352" width="80" height="28" fill="#e7d3b0" stroke="#b08d57"/>
+<path d="M150,230 L310,140 A184,184 0 0 1 310,320 Z" fill="#22d3ee" fill-opacity="0.10"/>
+<text x="250" y="318" font-size="14" fill="#0e7490">LiDAR view</text>
+<circle cx="470" cy="208" r="22" fill="#94a3b8" fill-opacity="0.45" stroke="#64748b" stroke-dasharray="4 4"/>
+<circle cx="470" cy="246" r="22" fill="#94a3b8" fill-opacity="0.3" stroke="#64748b" stroke-dasharray="4 4"/>
+<circle cx="470" cy="284" r="22" fill="#94a3b8" fill-opacity="0.18" stroke="#64748b" stroke-dasharray="4 4"/>
+<circle cx="470" cy="170" r="22" fill="#64748b"/>
+<line x1="470" y1="196" x2="470" y2="236" stroke="#334155" stroke-width="3" marker-end="url(#arr)"/>
+<circle cx="622" cy="276" r="22" fill="#94a3b8" fill-opacity="0.45" stroke="#64748b" stroke-dasharray="4 4"/>
+<circle cx="602" cy="250" r="22" fill="#94a3b8" fill-opacity="0.3" stroke="#64748b" stroke-dasharray="4 4"/>
+<circle cx="642" cy="302" r="22" fill="#64748b"/>
+<line x1="626" y1="286" x2="606" y2="262" stroke="#334155" stroke-width="3" marker-end="url(#arr)"/>
+<path d="M190,230 C300,230 360,128 470,124 S590,140 620,186 S690,218 724,218" fill="none" stroke="#0891b2" stroke-width="5" stroke-linecap="round"/>
+<circle cx="260" cy="222" r="4" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<circle cx="340" cy="176" r="4" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<circle cx="420" cy="130" r="4" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<circle cx="520" cy="128" r="4" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<circle cx="600" cy="166" r="4" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<circle cx="668" cy="212" r="4" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<line x1="728" y1="196" x2="728" y2="236" stroke="#111827" stroke-width="2"/><polygon points="728,196 750,203 728,210" fill="#16a34a"/>
+<g transform="translate(150 230) rotate(0) scale(1.0)"><rect x="-24" y="-31" width="16" height="8" rx="2" fill="#111827"/><rect x="10" y="-31" width="16" height="8" rx="2" fill="#111827"/><rect x="-24" y="23" width="16" height="8" rx="2" fill="#111827"/><rect x="10" y="23" width="16" height="8" rx="2" fill="#111827"/><rect x="-36" y="-24" width="72" height="48" rx="9" fill="#facc15" stroke="#a16207" stroke-width="2"/><rect x="-26" y="-17" width="52" height="34" rx="4" fill="#1f2937"/><circle cx="4" cy="0" r="5" fill="#f97316"/><line x1="-18" y1="-10" x2="-18" y2="-22" stroke="#111827" stroke-width="2"/><polygon points="30,-6 38,0 30,6" fill="#a16207"/></g>
+<g font-size="15" fill="#334155">
+<text x="118" y="290">Jackal</text>
+<text x="500" y="204">moving obstacle</text>
+<text x="440" y="266" fill="#64748b" text-anchor="end">predicted positions</text>
+<text x="520" y="114" fill="#0e7490" font-weight="600">planned path</text>
+<text x="704" y="256">goal</text></g>
+</svg>
