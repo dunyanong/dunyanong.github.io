@@ -1,0 +1,109 @@
+# Site configuration. Theme options: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
+
+theme: jekyll-theme-chirpy
+lang: en
+timezone: Asia/Singapore
+
+# ---- Identity and SEO (read by jekyll-seo-tag) ----
+
+title: Dun Yan Ong
+tagline: Robotics · Multi-Robot Systems · Scene Understanding · Perception # sidebar subtitle
+
+author:
+  name: Dun Yan Ong
+  url: https://dunyanong.github.io/
+
+description: >- # search-result snippet for pages without their own description
+  Dun Yan Ong (Ong Dun Yan), robotics researcher at NTU Singapore and the SJTU RAP Lab,
+  working on multi-robot systems, scene understanding and robot perception.
+
+url: "https://dunyanong.github.io" # no trailing slash
+baseurl: ""
+
+github:
+  username: dunyanong
+
+social:
+  name: Dun Yan Ong # default post author and footer copyright owner
+  email: ongd0017@e.ntu.edu.sg
+  links: # the first link is the footer's copyright link
+    - https://www.linkedin.com/in/dunyan/
+    - https://github.com/dunyanong
+    - https://scholar.google.com/citations?user=GgQpu5EAAAAJ
+
+webmaster_verifications:
+  google: # Google Search Console verification code
+
+avatar: /assets/img/avatar.jpg
+social_preview_image: /assets/img/og/home.jpg # share image for pages without their own `image`
+
+# ---- Behaviour ----
+
+toc: true # table of contents on posts
+
+pwa:
+  enabled: true # loads Chirpy's PWA script, which with the cache off removes old service workers
+  cache:
+    enabled: # leave EMPTY: no offline cache, so visitors always get the latest version
+             # ("false" would be passed as the string "false", which the script treats as on)
+
+# ---- Build (rarely changed) ----
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      toc: true
+      permalink: /posts/:title/ # the slug after the date in the filename
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - tools
+  - README.md
+  - LICENSE
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

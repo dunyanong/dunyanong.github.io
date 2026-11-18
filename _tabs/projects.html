@@ -1,0 +1,19 @@
+---
+icon: fas fa-project-diagram
+description: "Robotics projects by Dun Yan Ong: multi-robot navigation (VADER), NMPC for the ICRA BARN Challenge, RoboCup@Home perception and speech, SLAM and point clouds."
+order: 1
+---
+
+<p class="page-lede">
+  Most of this work was built with NTU's robotics teams for the ICRA BARN Challenge and for embodied AI at RoboCup@Home.
+  Team repositories that are still private are marked as such.
+</p>
+
+{% for group in site.data.projects %}
+  <h2>{{ group.theme }}</h2>
+  <div class="project-grid">
+    {% for p in group.items %}
+      {% include project-card.html project=p %}
+    {% endfor %}
+  </div>
+{% endfor %}

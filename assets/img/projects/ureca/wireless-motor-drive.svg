@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Wireless motor drive: DC power crosses an air gap by inductive coupling, is rectified, and drives a PMSM through an SPWM inverter</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" fill="#ffffff"/>
+  <text x="40" y="44" font-size="22" font-weight="600" fill="#111827">Wireless motor drive: power across an air gap</text>
+
+  <g font-size="15" fill="#111827" text-anchor="middle">
+    <!-- DC supply -->
+    <rect x="24" y="164" width="80" height="72" rx="10" fill="#f3f4f6" stroke="#9ca3af"/>
+    <text x="64" y="205">DC</text>
+    <line x1="104" y1="200" x2="122" y2="200" stroke="#4b5563" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- HF inverter -->
+    <rect x="124" y="164" width="100" height="72" rx="10" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="174" y="196">HF</text>
+    <text x="174" y="215">inverter</text>
+    <line x1="224" y1="200" x2="250" y2="200" stroke="#4b5563" stroke-width="2.5" marker-end="url(#a)"/>
+  </g>
+
+  <!-- transmitter and receiver coils -->
+  <g fill="none" stroke-width="4">
+    <g stroke="#2563eb">
+      <ellipse cx="276" cy="168" rx="16" ry="8"/><ellipse cx="276" cy="184" rx="16" ry="8"/>
+      <ellipse cx="276" cy="200" rx="16" ry="8"/><ellipse cx="276" cy="216" rx="16" ry="8"/>
+      <ellipse cx="276" cy="232" rx="16" ry="8"/>
+    </g>
+    <g stroke="#ea580c">
+      <ellipse cx="372" cy="168" rx="16" ry="8"/><ellipse cx="372" cy="184" rx="16" ry="8"/>
+      <ellipse cx="372" cy="200" rx="16" ry="8"/><ellipse cx="372" cy="216" rx="16" ry="8"/>
+      <ellipse cx="372" cy="232" rx="16" ry="8"/>
+    </g>
+  </g>
+  <!-- magnetic field across the gap -->
+  <g fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5 5">
+    <path d="M296,180 Q324,150 352,180"/>
+    <path d="M296,200 Q324,186 352,200"/>
+    <path d="M296,220 Q324,250 352,220"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#374151">
+    <text x="276" y="140">Tx coil</text>
+    <text x="372" y="140">Rx coil</text>
+    <text x="324" y="272" fill="#6d28d9">air gap</text>
+  </g>
+
+  <g font-size="15" fill="#111827" text-anchor="middle">
+    <line x1="394" y1="200" x2="414" y2="200" stroke="#4b5563" stroke-width="2.5" marker-end="url(#a)"/>
+    <!-- rectifier -->
+    <rect x="416" y="164" width="92" height="72" rx="10" fill="#ffedd5" stroke="#fb923c"/>
+    <text x="462" y="205">rectifier</text>
+    <line x1="508" y1="200" x2="526" y2="200" stroke="#4b5563" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- SPWM motor inverter -->
+    <rect x="528" y="164" width="110" height="72" rx="10" fill="#dcfce7" stroke="#4ade80"/>
+    <text x="583" y="196">SPWM</text>
+    <text x="583" y="215">inverter</text>
+    <line x1="638" y1="200" x2="660" y2="200" stroke="#4b5563" stroke-width="2.5" marker-end="url(#a)"/>
+
+    <!-- PMSM -->
+    <circle cx="712" cy="200" r="48" fill="#f3f4f6" stroke="#6b7280" stroke-width="2.5"/>
+    <circle cx="712" cy="200" r="26" fill="#e5e7eb" stroke="#9ca3af"/>
+    <path d="M712,174 A26,26 0 0 1 712,226 Z" fill="#fca5a5"/>
+    <path d="M712,174 A26,26 0 0 0 712,226 Z" fill="#93c5fd"/>
+    <text x="704" y="205" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="end">S</text>
+    <text x="720" y="205" font-size="13" font-weight="700" fill="#7f1d1d" text-anchor="start">N</text>
+    <text x="712" y="272">PMSM</text>
+  </g>
+
+  <!-- SPWM: a sine reference sampled into pulses -->
+  <g transform="translate(470 300)">
+    <rect x="0" y="0" width="226" height="84" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+    <g fill="#86efac">
+      <rect x="12" y="42" width="6" height="0.1"/><rect x="24" y="22" width="8" height="20"/><rect x="38" y="14" width="12" height="28"/>
+      <rect x="56" y="12" width="14" height="30"/><rect x="76" y="16" width="11" height="26"/><rect x="93" y="28" width="7" height="14"/>
+      <rect x="114" y="42" width="7" height="14"/><rect x="127" y="42" width="11" height="26"/><rect x="144" y="42" width="14" height="30"/>
+      <rect x="164" y="42" width="12" height="28"/><rect x="182" y="42" width="8" height="20"/>
+    </g>
+    <path d="M12,42 C40,0 80,0 107,42 S175,84 202,42" fill="none" stroke="#15803d" stroke-width="2.5"/>
+    <line x1="10" y1="42" x2="214" y2="42" stroke="#9ca3af" stroke-width="1"/>
+  </g>
+  <line x1="583" y1="236" x2="583" y2="298" stroke="#9ca3af" stroke-dasharray="3 4"/>
+  <text x="40" y="350" font-size="15" fill="#374151">Speed and torque are set by sinusoidal PWM</text>
+  <text x="40" y="372" font-size="15" fill="#374151">on the motor inverter.</text>
+</svg>
